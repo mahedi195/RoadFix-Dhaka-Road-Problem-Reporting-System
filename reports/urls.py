@@ -4,5 +4,6 @@ from .import views
 
 
 urlpatterns=[
-    path('',views.report_list)
+    #path('report',views.report_list),
+    path('',views.report_list),
 ]
