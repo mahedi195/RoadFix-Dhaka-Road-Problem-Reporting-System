@@ -4,14 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Report Details {{report.id}}</title>
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .report_details {
+            width: 650px;
+            border: 1px solid #c5c3c3;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 5px 10px #c5c3c3;
+            margin: 35px auto;
+
+        }
+
+
+
+        .report_title p {
+            margin: 0;
+        }
+
+        .report_title h2 {
+            /* margin: 0; */
+            /* margin: 15px 0px; */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+
+        .status_and_createDate {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status_and_createDate p {
+            margin: 0;
+
+        }
+
+        .status_and_createDate .date {}
+
+        .image_and_details {
+            /* display: grid; */
+            /* grid-template-columns: 1fr 1fr; */
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .image_and_details .photo {}
+
+
+        .image_and_details img {
+            border-radius: 10px;
+            object-fit: cover;
+            /* height: auto; */
+            width: 300px;
+            height: 180px;
+        }
+
+        .image_and_details p {
+            margin: 0;
+            /* line-height: 1.4; */
+        }
+
+        .details p {
+            margin-bottom: 4px;
+        }
+
+        .location_details_text {
+            /* font-weight: bold; */
+            /* margin: 0; */
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #163b32;
+        }
+
+
+        .pending {
+            color: rgb(180, 106, 9);
+            background-color: rgb(243, 224, 199);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .in_progress {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .resolved {
+            color: rgb(34, 175, 34);
+            background-color: rgb(112, 224, 112);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .details {
+            border: 1px solid rgb(209, 208, 208);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+        .no_photo {
+            color: #474545;
+        }
+
+
+    </style>
 </head>
 
 <body>
 
-    <h1>Report Details</h1>
-    <h1>{{report.title}}</h1>
-    <h1>{{report.id}}</h1>
+    <div class="report_details">
+        <div class="report_title">
+            <h2>{{report.title}}</h2>
+            <p>{{report.description}}</p>
+        </div>
+
+        <div class="status_and_createDate">
+            <p class="{{report.status}}">{{report.get_status_display}}</p>
+            <p class="date">Reported On {{report.create_date|date:'d M Y, h:i A'}}</p>
+        </div>
+
+        <div class="image_and_details">
+
+            <div class="photo">
+                {% if report.photo %}
+                <img src="{{ report.photo.url }}">
+                {% else %}
+                <p class="no_photo">No photo available</p>
+                {% endif %}
+            </div>
+
+            <div class="details">
+                <h3 class="location_details_text">Location Details</h3>
+                <p><strong>Location : </strong>{{report.location}}</p>
+                <p><strong>Road Information : </strong>{{report.road_information}}</p>
+                <br>
+                <p><strong>Nearby Landmark : </strong>{{report.landmarks}}</p>
+                <p><strong>Additional Details : </strong>{{report.additional_details}}</p>
+                <br>
+                <p><strong>Status : </strong>{{report.get_status_display}}</p>
+                <p><strong>Category : </strong>{{report.get_category_display}}</p>
+                <p><strong>Submitted By : </strong>{{report.user}}</p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
 
 
 
