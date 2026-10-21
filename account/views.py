@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 
+def user_login(request):
+    return render(request,'login.html')
+
+
 def user_registration(request):
     if request.method == "GET":
         return render(request, "registration.html")

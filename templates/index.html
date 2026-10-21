@@ -13,7 +13,7 @@
         body {
             margin: 0;
             padding: 10px;
-            max-width: 750px;
+            max-width: 610px;
             margin: 50px auto;
             border: 1px solid #d9d9d9;
             border-radius: 5px;
@@ -117,7 +117,6 @@
 
         }
 
-        .all_cart {}
 
 
         .issue_status {
@@ -125,11 +124,11 @@
             align-items: center;
             justify-content: space-between;
             color: #5b5858;
+            font-size: 20px;
         }
 
         .issue_status p {
             margin: 0px;
-            font-size: 16px;
         }
 
         .status-pending {
@@ -158,14 +157,14 @@
 
         .title_category_description {
             /* margin-top: 30px; */
-            margin-bottom: 0px;
+            margin-bottom: 18px;
             margin-top: 0px;
         }
 
-        .title_category_description p {}
 
         .location {
             color: #5b5858;
+            font-size: 20px;
 
         }
 
@@ -198,7 +197,7 @@
             margin-bottom: 0px;
             /* margin-top: 8px; */
             margin-top: 15px;
-            font-size: 20px;
+            font-size: 22px;
 
         }
 
@@ -207,7 +206,7 @@
             /*margin-top: 10px; */
             margin-bottom: 0px;
             margin-top: 5px;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .recent_road_problems_text {
@@ -223,7 +222,7 @@
         .Photos_and_viewDetails {
 
             /* justify-content: space-between; */
-            margin-top: 10px;
+            /*margin-top: 10px;*/
             /* margin-bottom: 15px; */
 
         }
@@ -231,7 +230,7 @@
 
         .view_details {
             padding: 5px 10px;
-            font-size: 16px;
+            font-size: 18px;
             border-radius: 30px;
             border: 1px solid #9b9898;
             outline: 0;
@@ -274,6 +273,7 @@
             align-items: center;
             /* margin-bottom: 0px; */
             margin: 0px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -284,7 +284,7 @@
         <h1>RoadFix</h1>
         <div class="register_login">
             <a href="{% url 'register' %}">Register</a>
-            <a href="#">Login</a>
+            <a href="{% url 'loginPage' %}">Login</a>
         </div>
 
     </nav>

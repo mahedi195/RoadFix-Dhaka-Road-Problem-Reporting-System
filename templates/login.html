@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .fullForm {
+            border: 1px solid rgb(182, 181, 181);
+            width: 520px;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 1px 2px 3px #a5a4a4;
+        }
+
+        .headerSection {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .headerSection h2 {
+            margin: 0;
+            margin-bottom: 7px;
+            color: #163b32;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .headerSection p {
+            margin: 0;
+            font-size: 18px;
+            color: #777676;
+        }
+
+
+        .welcomeSection h3 {
+            margin: 0;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            flex: 1;
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 5px;
+            border: 1px solid #c4bbbb;
+            box-shadow: 1px 2px 2px #c0bdbd;
+            outline: 0;
+            FONT-SIZE: 18PX;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .rememberMe {
+            display: flex;
+            margin: 0;
+        }
+
+        .rememberMe_or_ForgetPassword {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        .ForgetPasswoed {
+            margin: 0;
+        }
+
+        .rememberMe input,
+        .rememberMe p {
+            margin: 0;
+        }
+
+
+        .ForgetPasswoed p {
+            margin: 0;
+        }
+
+        .rememberMe input {
+            margin-right: 6px;
+        }
+
+        .loginButton {
+            margin-bottom: 15px;
+        }
+
+        .loginButton button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #bbb8b8;
+            box-shadow: 1px 2px 3px #b5b5b5;
+            background: #163b32;
+            color: white;
+        }
+
+        .noAccount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+
+        .noAccount p {
+            margin: 0;
+            margin-right: 20px;
+        }
+
+        .noAccount a {
+            color: #163b32;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="POST">
+
+        <div class="fullForm">
+            <div class="headerSection">
+                <h2 class="">RoadFix Dhaka</h2>
+                <p>Make Dhaka's Road clean</p>
+            </div>
+
+
+            <div class="email_username">
+                <label>Email or username</label>
+                <input type="text" class="Enter your email or username">
+            </div>
+
+            <div class="password">
+                <label>Password</label>
+                <input type="password" class="Enter your password">
+            </div>
+
+            <div class="rememberMe_or_ForgetPassword">
+                <div class="rememberMe">
+                    <input type="Checkbox">
+                    <p>Remember me</p>
+                </div>
+
+                <div class="ForgetPasswoed">
+                    <p>Forget Password?</p>
+                </div>
+            </div>
+
+            <div class="loginButton">
+                <button>Login</button>
+            </div>
+
+
+            <div class="noAccount">
+                <p>Don't have an account?</p>
+                <a href="register">Register</a>
+            </div>
+
+
+        </div>
+
+    </form>
+</body>
+
+</html>
