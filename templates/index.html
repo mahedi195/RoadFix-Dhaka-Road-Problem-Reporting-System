@@ -198,7 +198,7 @@
             margin-bottom: 0px;
             /* margin-top: 8px; */
             margin-top: 15px;
-            font-size: 18px;
+            font-size: 20px;
 
         }
 
@@ -207,7 +207,7 @@
             /*margin-top: 10px; */
             margin-bottom: 0px;
             margin-top: 5px;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .recent_road_problems_text {
@@ -231,7 +231,7 @@
 
         .view_details {
             padding: 5px 10px;
-            font-size: 14px;
+            font-size: 16px;
             border-radius: 30px;
             border: 1px solid #9b9898;
             outline: 0;
@@ -283,7 +283,7 @@
     <nav>
         <h1>RoadFix</h1>
         <div class="register_login">
-            <a href="#">Register</a>
+            <a href="{% url 'register' %}">Register</a>
             <a href="#">Login</a>
         </div>
 
@@ -311,7 +311,10 @@
             <div class="cart">
 
                 <div class="issue_status">
-                    <p class="issue">Issue # {{reports.create_date|date:'Ymd'}}-{{reports.id|stringformat:'04d'}}</p>
+                    <!--<p class="issue">Issue # {{reports.create_date|date:'Ymd'}}-{{reports.id|stringformat:'04d'}}</p>
+                -->    
+                    <p class="issue">Report : {{reports.id|stringformat:'06d'}}</p>
+
                     <p class="prb_category">{{reports.get_category_display}}</p>
 
                     <p class="status-{{reports.status}}">{{reports.get_status_display}}</p>
@@ -320,7 +323,7 @@
                 <div class="location">
                     <p class="prb_area">
                         <img src="{% static 'images/location.png' %}">
-                        {{reports.location}},{{reports.road_information}}
+                        {{reports.location}} , {{reports.road_information}}
                     </p>
 
 

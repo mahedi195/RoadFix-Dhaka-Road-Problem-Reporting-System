@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .registrationForm {
+            border: 1px solid rgb(199, 197, 197);
+            width: 650px;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .headingSeaction {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .headingSeaction h1 {
+            margin: 0;
+            color: #163b32;
+
+        }
+
+        .headingSeaction p {
+            margin: 0;
+            margin-top: 3px;
+            font-size: 20px;
+            color: #5b5a5a;
+        }
+
+        .name_section {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
+
+
+        .firstName,
+        .lastName {
+            flex: 1;
+        }
+
+        .name_section input {}
+
+        input {
+            width: 100%;
+            padding: 7px 15px;
+            border-radius: 5px;
+            outline: 0;
+            border: 1px solid #adadad;
+            font-size: 20px;
+        }
+
+        div {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .createAccount {
+            margin-bottom: 5px !important;
+        }
+
+        .createAccount button {
+            padding: 10px 20px;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 5px;
+            outline: 0;
+            border: 1px solid #b3afaf;
+            color: white;
+            background: #163b32;
+            cursor: pointer;
+
+            transition: background-color 0.3s ease,
+                transform 0.3s ease
+        }
+
+        .createAccount button:hover {
+            background-color: #3b7e6d;
+            transform: scale(1.05);
+        }
+
+        .loginSection {
+            margin-bottom: 0px !important;
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .loginSection .login {
+            color: #163b32;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+
+        input:focus {
+            border-color: #163b32;
+            outline: 2px solid rgba(22, 59, 50, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="registrationForm">
+        <form method="POST">
+            {% csrf_token %}
+
+
+            <div class="headingSeaction">
+                <h1>Create an account</h1>
+                <p>Join RoadFix and report problems to make clean Dhaka</p>
+            </div>
+
+
+            <div class="name_section">
+                <div class="firstName">
+                    <label>First Name</label>
+                    <input type="text" placeholder="First Name" name="fname" spellcheck="false" required>
+                </div>
+
+
+                <div class="lastName">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last Name" name="lname" spellcheck="false" required>
+                </div>
+            </div>
+
+
+            <div class="userName">
+                <label>Username</label>
+                <input type="text" placeholder="Enter a username" name="username" spellcheck="false" required>
+            </div>
+
+
+            <div class="email">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email address" name="email" spellcheck="false" required>
+            </div>
+
+
+            <div class="password">
+                <label>Password</label>
+                <input type="password" placeholder="Create a password" name="password1" spellcheck="false" required>
+            </div>
+
+            <div class="confirmPassword">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" name="password2" required>
+            </div>
+
+            <div class="createAccount">
+                <button class="createAccount">Create Account</button>
+
+            </div>
+
+            <div class="loginSection">Already have a account?&nbsp;&nbsp;<span class="login">Log in</span></div>
+
+        </form>
+    </div>
+</body>
+
+</html>

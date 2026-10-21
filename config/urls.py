@@ -19,8 +19,15 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+   
     path('',include('reports.urls')),
+   
    #  path('',include('reports.urls')),
+   
+   path('accounts/',include('account.urls')),
+
+
+
 ]
 
 from django.conf import settings
