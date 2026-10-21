@@ -125,6 +125,26 @@
             border-color: #163b32;
             outline: 2px solid rgba(22, 59, 50, 0.2);
         }
+
+        .usernameError
+         {
+            margin-top: 5px;
+            margin-bottom: 0;
+            color: red;
+            font-size: 16px;
+        }
+
+
+        .input_error {
+            border: 1px solid red;
+        }
+
+        .input_error:focus
+       
+        {
+            border: 1px solid red;
+            box-shadow: 1px 2px 5px rgb(182, 91, 91);
+        }
     </style>
 </head>
 
@@ -144,26 +164,40 @@
             <div class="name_section">
                 <div class="firstName">
                     <label>First Name</label>
-                    <input type="text" placeholder="First Name" name="fname" spellcheck="false" required>
+                    <input type="text" placeholder="First Name" name="fname" spellcheck="false" value="{{fname}}"
+                        required>
                 </div>
 
 
                 <div class="lastName">
                     <label>Last Name</label>
-                    <input type="text" placeholder="Last Name" name="lname" spellcheck="false" required>
+                    <input type="text" placeholder="Last Name" name="lname" spellcheck="false" value="{{lname}}"
+                        required>
                 </div>
             </div>
 
 
             <div class="userName">
                 <label>Username</label>
-                <input type="text" placeholder="Enter a username" name="username" spellcheck="false" required>
+                <input type="text" placeholder="Enter a username" name="username" spellcheck="false"
+                    value="{{username}}" class="{% if username_exist %} input_error {% endif %}" required>
+                {% if username_exist %}
+                <p class="usernameError">{{username_exist}}</p>
+                {% endif %}
             </div>
+
 
 
             <div class="email">
                 <label>Email Address</label>
-                <input type="email" placeholder="Enter your email address" name="email" spellcheck="false" required>
+                <input type="email" placeholder="Enter your email address" name="email" spellcheck="false"
+                    value="{{email}}" 
+                    class="{% if email_exist %} input_error {% endif %}"
+                    required>
+
+                {% if email_exist %}
+                <p class="usernameError">{{email_exist}}</p>
+                {% endif %}
             </div>
 
 
@@ -174,7 +208,15 @@
 
             <div class="confirmPassword">
                 <label>Confirm Password</label>
-                <input type="password" placeholder="Re-enter your password" name="password2" required>
+                <input type="password" placeholder="Re-enter your password" name="password2"
+
+                 class="{% if password_not_matched %} input_error {% endif %}"
+                
+                required>
+                {% if password_not_matched %}
+                    <p class="usernameError">{{password_not_matched}}</p>
+                {% endif %}
+                <p></p>
             </div>
 
             <div class="createAccount">
@@ -185,6 +227,10 @@
             <div class="loginSection">Already have a account?&nbsp;&nbsp;<span class="login">Log in</span></div>
 
         </form>
+
+        {% if error %}
+        <p>{{error}}</p>
+        {% endif %}
     </div>
 </body>
 
