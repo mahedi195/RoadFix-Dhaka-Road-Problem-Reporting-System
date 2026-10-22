@@ -1,11 +1,44 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login,logout
 
 # Create your views here.
 
 
+def logout_user(request):
+    logout(request)
+    return redirect('/')
+
+
+
 def user_login(request):
-    return render(request,'login.html')
+    if request.method == "GET":
+        return render(request, "login.html")
+    elif request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        rememberMe=request.POST.get('rememberMe')
+
+        user = authenticate(request, username=username, password=password)
+        context = {
+            "username": username,
+            "message": "Incorrect username or password"
+            }
+
+        if user is None:  # user is not found
+            return render(request, "login.html", context)
+
+        elif user is not None:  # user found
+            context["message"] = f"Welcome {username}"
+            login(request, user)
+            if rememberMe:
+              request.session.set_expiry(30*24*60*60)
+            else :
+                request.session.set_expiry(0)
+            return redirect("/")
+
+
+
 
 
 def user_registration(request):
@@ -27,23 +60,16 @@ def user_registration(request):
         }
 
         if password1 != password2:
-            context['password_not_matched']="Password don't match"
-            return render(
-                request,"registration.html",context
-            )
-        
+            context["password_not_matched"] = "Password don't match"
+            return render(request, "registration.html", context)
+
         elif User.objects.filter(username=user_name).exists():
-            context['username_exist']="Username already taken"
-            return render(
-                request, "registration.html",context
-               
-            )
+            context["username_exist"] = "Username already taken"
+            return render(request, "registration.html", context)
         elif User.objects.filter(email=emailAddress).exists():
-            context['email_exist']="Email already registered"
-            return render(
-                request, "registration.html",context
-            )
-        
+            context["email_exist"] = "Email already registered"
+            return render(request, "registration.html", context)
+
         else:
             user = User.objects.create_user(
                 first_name=first_name,

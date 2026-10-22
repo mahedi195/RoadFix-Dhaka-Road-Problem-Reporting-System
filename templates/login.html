@@ -86,7 +86,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .ForgetPasswoed {
@@ -101,6 +101,7 @@
 
         .ForgetPasswoed p {
             margin: 0;
+            color: #163b32;
         }
 
         .rememberMe input {
@@ -109,9 +110,11 @@
 
         .loginButton {
             margin-bottom: 15px;
+
         }
 
         .loginButton button {
+            cursor: pointer;
             width: 100%;
             padding: 10px;
             font-size: 18px;
@@ -126,7 +129,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 0px;
         }
 
@@ -140,12 +143,20 @@
             font-weight: bold;
             text-decoration: underline;
         }
+
+        .error {
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: red;
+        }
     </style>
 </head>
 
 <body>
 
     <form method="POST">
+        {% csrf_token %}
 
         <div class="fullForm">
             <div class="headerSection">
@@ -156,17 +167,22 @@
 
             <div class="email_username">
                 <label>Email or username</label>
-                <input type="text" class="Enter your email or username">
+                <input type="text" placeholder="Enter your email or username" name="username" value="{{username}}"
+                    required>
             </div>
 
             <div class="password">
                 <label>Password</label>
-                <input type="password" class="Enter your password">
+                <input type="password" class="Enter your password" name="password" required>
             </div>
+
+            {% if message %}
+            <p class="error">{{message}}</p>
+            {% endif %}
 
             <div class="rememberMe_or_ForgetPassword">
                 <div class="rememberMe">
-                    <input type="Checkbox">
+                    <input type="Checkbox" name="rememberMe">
                     <p>Remember me</p>
                 </div>
 
@@ -182,7 +198,7 @@
 
             <div class="noAccount">
                 <p>Don't have an account?</p>
-                <a href="register">Register</a>
+                <a href="{% url 'registerMe' %}">Register</a>
             </div>
 
 
