@@ -315,7 +315,7 @@
             color: #163b32;
         }
 
-      
+
         .register_login:hover ul {
             display: block;
         }
@@ -327,18 +327,31 @@
 
         }
 
-        .register_login{
-            cursor: pointer;
-        }
-
-        .profile ul{
+    
+        .profile ul {
             display: none;
         }
 
-        .profile ul li:hover{
+        .profile ul li:hover {
             background-color: #E5EEE9;
             color: #0B5D46;
         }
+
+        .register_loginPage a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .register_loginPage {
+            display: flex;
+            gap: 30px;
+        }
+
+
+
+
 
 
     </style>
@@ -369,8 +382,12 @@
 
             </div>
             {% else %}
-            <a href="{% url 'register' %}">Register</a>
-            <a href="{% url 'loginPage' %}">Login</a>
+            <div class="register_loginPage">
+
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'loginPage' %}">Login</a>
+
+            </div>
 
             {% endif %}
 
