@@ -1,14 +1,23 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
+
+from reports.models import Report as reportAppReportClassModel
+
+
+def userProfile(request):
+    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by('-create_date')
+    return render(request, "userProfile.html", 
+                  {
+                      "myAllReports": myReports
+                   })
 
 
 def logout_user(request):
     logout(request)
-    return redirect('/')
-
+    return redirect("/")
 
 
 def user_login(request):
@@ -17,13 +26,10 @@ def user_login(request):
     elif request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        rememberMe=request.POST.get('rememberMe')
+        rememberMe = request.POST.get("rememberMe")
 
         user = authenticate(request, username=username, password=password)
-        context = {
-            "username": username,
-            "message": "Incorrect username or password"
-            }
+        context = {"username": username, "message": "Incorrect username or password"}
 
         if user is None:  # user is not found
             return render(request, "login.html", context)
@@ -32,13 +38,10 @@ def user_login(request):
             context["message"] = f"Welcome {username}"
             login(request, user)
             if rememberMe:
-              request.session.set_expiry(30*24*60*60)
-            else :
+                request.session.set_expiry(30 * 24 * 60 * 60)
+            else:
                 request.session.set_expiry(0)
             return redirect("/")
-
-
-
 
 
 def user_registration(request):

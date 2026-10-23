@@ -6,7 +6,7 @@ urlpatterns = [
     path("", views.report_list, name="index"),
     #    path('createForm/',views.report_create),
     path("reportForm/", views.report_create, name="report_form"),
-    path('report/<int:id>/' ,views.report_details,name='report_details'),
+    path('report/<int:id>/' ,views.report_details,name='specific_report_details'),
 
 
 ]

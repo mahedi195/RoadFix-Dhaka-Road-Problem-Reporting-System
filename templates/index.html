@@ -24,7 +24,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #163b32;
+            background-color: #1F4E78;
             color: white;
             /* padding: 0px 30px; */
             border-radius: 5px;
@@ -42,7 +42,7 @@
 
 
         .report_a_problem {
-            background-color: #163b32;
+            background-color: #D1DFEB;
             color: white;
             font-size: 20px;
             padding: 10px 20px;
@@ -371,11 +371,11 @@
             <div class="profile">
                 <div class="image_and_name">
                     <img src="{% static 'images/location.png' %}">
-                    <span class="username">Hi {{user.username}}</span>
+                    <span class="username">Hi, {{user.username}}</span>
                 </div>
 
                 <ul>
-                    <li><a href="">My Profile</a></li>
+                    <li><a href="{% url 'myProfilePage' %}">My Profile</a></li>
                     <li><a href="{% url 'logoutOption' %}">Logout</a></li>
                 </ul>
 
@@ -466,7 +466,7 @@
 
 
                         <button class="view_details">
-                            <a href="{% url 'report_details' reports.id %}">
+                            <a href="{% url 'specific_report_details' reports.id %}">
                                 View Details
                             </a>
                         </button>
