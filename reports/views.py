@@ -15,6 +15,25 @@ from django.shortcuts import render, redirect
 from .models import Report
 
 
+def dashboard(request):
+    allReports = Report.objects.all().order_by('-create_date')[:3]
+    totReport=Report.objects.all().count()
+    pending = Report.objects.filter(status="pending").count()
+    inProgress = Report.objects.filter(status="in_progress").count()
+    resolvedd = Report.objects.filter(status="resolved").count()
+    return render(
+        request,
+        "dashboard.html",
+        {
+            "allReports":allReports,
+            "totalReport": totReport,
+            "pendingReport": pending,
+            "inProgressReport": inProgress,
+            "resolvedReport": resolvedd,
+        },
+    )
+
+
 def report_list(request):
     all_report = Report.objects.all().order_by("-create_date")
     return render(request, "index.html", {"all_report": all_report})
@@ -52,11 +71,6 @@ def report_create(request):
         return redirect("index")
 
 
-def report_details(request,id):
-    report=Report.objects.get(id=id)
-    return render(request,'report_details.html',
-                  {
-                      'report':report
-                  })
-
-
+def report_details(request, id):
+    report = Report.objects.get(id=id)
+    return render(request, "report_details.html", {"report": report})

@@ -7,6 +7,6 @@ urlpatterns = [
     #    path('createForm/',views.report_create),
     path("reportForm/", views.report_create, name="report_form"),
     path('report/<int:id>/' ,views.report_details,name='specific_report_details'),
-
+    path('dashboardPage/',views.dashboard, name='Dashboard')
 
 ]
