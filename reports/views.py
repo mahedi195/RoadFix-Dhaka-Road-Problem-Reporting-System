@@ -15,6 +15,26 @@ from django.shortcuts import render, redirect
 from .models import Report
 
 
+
+def allReport(request):
+    allReports = Report.objects.all().order_by('-create_date')
+    return render(
+            request,
+            "allReports.html",
+            {
+                "allReports":allReports,
+
+            },
+        )
+
+
+
+
+
+
+
+
+
 def dashboard(request):
     allReports = Report.objects.all().order_by('-create_date')[:3]
     totReport=Report.objects.all().count()

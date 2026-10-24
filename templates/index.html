@@ -12,91 +12,14 @@
     <style>
         body {
             margin: 0;
-            padding: 10px;
-            max-width: 610px;
-            margin: 50px auto;
-            border: 1px solid #d9d9d9;
-            border-radius: 5px;
+            padding: 0;
 
         }
 
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #1F4E78;
-            color: white;
-            /* padding: 0px 30px; */
-            border-radius: 5px;
-            padding: 0px 0px 0px 20px;
-        }
-
-        nav h1 {
-            font-size: 28px;
-            margin: 0px;
-            /* padding: 7px; */
-        }
 
 
 
 
-
-        .report_a_problem {
-            background-color: #D1DFEB;
-            color: white;
-            font-size: 20px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            /* margin-top: 10px;*/
-
-            transition: background-color 0.3s ease,
-                transform 0.3s ease
-        }
-
-        .report_a_problem:hover {
-            background-color: #355049;
-            transform: scale(2.05);
-        }
-
-
-        header {
-            background-color: #e1eee7;
-            padding: 50px;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        header h2 {
-            margin: 0px;
-            font-size: 26px;
-
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #4d4c4c;
-            margin-bottom: 20px;
-
-        }
-
-        header button {
-            padding: 15px 20px;
-            font-size: 20px;
-            border-radius: 5px;
-            border: none;
-            outline: 0;
-            background: #f99400;
-            color: white;
-            cursor: pointer;
-        }
-
-        header button :hover {
-            background-color: #e9a540;
-        }
 
         .cart {
             /* font-size: 23px;
@@ -271,107 +194,333 @@
             font-size: 18px;
         }
 
-        .image_and_name img {
-            width: 25px;
-            border-radius: 50%;
-            /* object-fit: cover;*/
 
+
+
+
+
+
+        /* ---- */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0px;
+            /* max-width: 610px; */
+            /* margin: 50px auto; */
+            border: none;
+            border-radius: 0px;
+        }
+
+
+        header {
+            position: relative;
+            margin-bottom: 0px;
+        }
+
+        header img {
+            width: 100%;
+            height: 550px;
+            object-fit: fill;
+            display: block;
+        }
+
+        header .left_text {
+            position: absolute;
+            top: 40%;
+            left: 5%;
+            transform: translateY(-50%);
+            width: 40%;
+        }
+
+
+        .left_text .firstLine {
+            color: white;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #0c5495;
+            margin-bottom: 10px;
+        }
+
+        .left_text h1 {
+
+            color: #1F4E78;
+        }
+
+        .left_text .btn a {
+            text-decoration: none;
+            font-size: 20px;
+            /* border: 1px solid #f1f1f1; */
+            padding: 12px 17px;
+            border-radius: 40px;
+            color: white;
+            background: #1F4E78;
+
+        }
+
+        .left_text .fourthLine {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1F4E78;
+        }
+
+        .left_text .third_line {
+            margin-bottom: 20px;
+
+        }
+
+        .left_text .btn {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .left_text .btn a {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        .left_text .btn a:hover {
+            background-color: white;
+            color: #1F4E78;
+            transform: scale(1.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        nav {
+            position: relative;
+            /* padding: 10px 20px; */
+        }
+
+
+        .logo_and_roadFix img {
+            width: 30px;
+
+        }
+
+        .logo_and_roadFix h1 {
+            margin: 0;
+            color: white;
+        }
+
+
+        .logo_and_roadFix {
+            display: flex;
+        }
+
+        nav .othersOption {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+        }
+
+        nav .register_login {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 0;
+            /* padding: 6px 20px; */
+            background-color: #1F4E78;
+        }
+
+        .register_loginPage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .othersOption a {
+            position: relative;
+        }
+
+        .othersOption a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            left: 0;
+            bottom: 0px;
+            transition: width 0.3s ease;
+
+        }
+
+        .othersOption a:hover::after {
+            width: 100%;
+        }
+
+        .image_and_name img {
+            width: 20px;
+            background: transparent;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 6px;
         }
 
         .image_and_name {
             display: flex;
             align-items: center;
-            justify-content: center;
+
+            margin-right: 40px;
+        }
+
+
+        .profile .username {
+            font-size: 20px;
+            color: white;
         }
 
 
         nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            background-color: #1F4E78;
+
+            padding: 10px 0px 2px 20px;
+        }
+
+
+        .profile {
             position: relative;
-            padding: 10px 20px;
-        }
-
-        .register_login .profile ul {
-            position: absolute;
-            background: white;
-            margin: 0;
-            padding: 0;
-            top: 100%;
-            right: 0;
-            margin-left: 20px;
-        }
-
-        .register_login .profile ul li {
-            list-style: none;
-            border-bottom: 1px solid #bfbdbd;
-            padding: 8px;
-            font-size: 20px;
-
-        }
-
-
-        .register_login .profile ul li a {
-            text-decoration: none;
-            padding: 20px;
-            color: #163b32;
-        }
-
-
-        .register_login:hover ul {
-            display: block;
-        }
-
-        .register_login .image_and_name .username {
-            margin-left: 7px;
-            font-size: 20px;
-            color: white;
-
-        }
-
-    
-        .profile ul {
-            display: none;
-        }
-
-        .profile ul li:hover {
-            background-color: #E5EEE9;
-            color: #0B5D46;
-        }
-
-        .register_loginPage a {
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
             cursor: pointer;
         }
 
-        .register_loginPage {
-            display: flex;
-            gap: 30px;
+        .profile ul {
+            position: absolute;
+           /* display: none; */
+            width: 100%;
+            list-style: none;
+            top: 100%;
+            left: 0;
+            padding: 5px 0px;
+            background-color: white;
+            z-index: 100;
+
+
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            /* Starts slightly shifted up */
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+
+
+        }
+
+        .profile:hover ul {
+            /*   display: block;*/
+
+
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+
+        }
+
+        .profile ul li {
+            color: #1F4E78;
         }
 
 
 
+        .profile ul li a {
+            display: block;
+            padding: 10px 15px;
+            color: #1F4E78;
+            text-decoration: none;
 
 
+        }
 
+        .profile ul li a:hover {
+            color: #f0f0f0;
+            background-color: #1F4E78;
+
+        }
+
+        .profile li {
+            width: 100%;
+            border-bottom: 1px solid gray;
+
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
 
+
     <nav>
-        <div>
+        <div class="logo_and_roadFix">
+            <!--   <img src="{% static 'images/location.png' %}"> -->
             <h1>RoadFix</h1>
         </div>
 
-        <div class="register_login">
 
+
+
+        <div class="othersOption">
+            <a href="{% url 'Dashboard' %}">Dashboard</a>
+            <a href="{% url 'allReports' %}">All Reports</a>
+            <a href="{% url 'report_form' %}">Report Problem</a>
+        </div>
+
+
+
+        <div class="register_login">
             {% if user.is_authenticated %}
 
             <div class="profile">
                 <div class="image_and_name">
                     <img src="{% static 'images/location.png' %}">
-                    <span class="username">Hi, {{user.username}}</span>
+                    <span class="username">{{user.username}}</span>
                 </div>
 
                 <ul>
@@ -392,21 +541,25 @@
             {% endif %}
 
         </div>
-
     </nav>
 
 
 
+
     <header>
-        <a href="{% url 'Dashboard' %}">Dashboard</a>
-        <h2>Make Dhaka's Road Better</h2>
-        <p>Report road problems and keep clean Dhaka</p>
-
-        <a href="{% url 'report_form' %}" class="report_a_problem">
-            Report a Problem
-        </a>
-
+        <img src="{% static 'images/img4.png' %}">
+        <div class="left_text">
+            <p class="firstLine">A cleaner, safer and better Dhaka</p>
+            <h1 class="second_line">Let's make Dhaka's</h1>
+            <h1 class="third_line">Road better</h1>
+            <p class="fourthLine">Report Road Problems and help build safer, smoother streets for everyone.</p>
+            <div class="btn">
+                <a href="report_form">Report a Problem</a>
+                <a href="">View my Reports</a>
+            </div>
+        </div>
     </header>
+
 
 
     <main class="main_section">
