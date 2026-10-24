@@ -13,6 +13,7 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #f1f1f1;
 
         }
 
@@ -22,13 +23,15 @@
 
 
         .cart {
-            /* font-size: 23px;
-            */
-            border: 1px solid #dfdcdc;
+            /* font-size: 23px; */
+            /* border: 1px solid #dfdcdc; */
             margin-bottom: 25px;
             border-radius: 5px;
             padding: 10px;
             box-shadow: 1px 5px 10px #cfcece;
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 15px;
 
         }
 
@@ -217,78 +220,19 @@
         }
 
 
-        header {
-            position: relative;
-            margin-bottom: 0px;
+
+
+        .main_section {
+            margin: 0;
+            margin-top: 60px;
         }
 
-        header img {
-            width: 100%;
-            height: 550px;
-            object-fit: fill;
-            display: block;
-        }
-
-        header .left_text {
-            position: absolute;
-            top: 40%;
-            left: 5%;
-            transform: translateY(-50%);
-            width: 40%;
-        }
-
-
-        .left_text .firstLine {
-            color: white;
-            font-size: 20px;
-            letter-spacing: 1px;
-            color: #0c5495;
-            margin-bottom: 10px;
-        }
-
-        .left_text h1 {
-
+        .main_section h2 {
+            margin: 0;
             color: #1F4E78;
         }
 
-        .left_text .btn a {
-            text-decoration: none;
-            font-size: 20px;
-            /* border: 1px solid #f1f1f1; */
-            padding: 12px 17px;
-            border-radius: 40px;
-            color: white;
-            background: #1F4E78;
 
-        }
-
-        .left_text .fourthLine {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #1F4E78;
-        }
-
-        .left_text .third_line {
-            margin-bottom: 20px;
-
-        }
-
-        .left_text .btn {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-        }
-
-        .left_text .btn a {
-            transition: background-color 0.3s ease, transform 0.3s ease;
-
-        }
-
-        .left_text .btn a:hover {
-            background-color: white;
-            color: #1F4E78;
-            transform: scale(1.05);
-        }
 
         * {
             margin: 0;
@@ -433,7 +377,7 @@
 
         .profile ul {
             position: absolute;
-           /* display: none; */
+            /* display: none; */
             width: 100%;
             list-style: none;
             top: 100%;
@@ -472,7 +416,7 @@
 
         .profile ul li a {
             display: block;
-            padding: 10px 15px;
+            padding: 3px 15px;
             color: #1F4E78;
             text-decoration: none;
 
@@ -490,6 +434,136 @@
             border-bottom: 1px solid gray;
 
             width: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .reportSection {
+            margin: 0 30px;
+        }
+
+        .reportSection .status {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        .reportSection .box {
+            background: white;
+            border-radius: 7px;
+        }
+
+        .reportSection .box p {
+            margin: 0;
+        }
+
+        .reportSection .box .text {
+            margin: 20px 15px;
+        }
+
+        .reportSection .box .text .firstline {
+            font-weight: bold;
+            margin-bottom: 5px;
+
+        }
+
+        .reportSection .box .text .secondline {
+            color: rgb(129 129 129);
+        }
+
+        .reportSection .ReporSectionheadline {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .all_cart {
+            margin: 30px 30px;
+        }
+
+
+
+
+
+
+
+        .coverPhoto {
+            height: 450px;
+            width: 100%;
+        }
+
+        header .firstLine {
+            margin-bottom: 5px;
+        }
+
+        header .second_line {
+            margin-bottom: 5px;
+        }
+
+        header .fourthLine {
+            margin-bottom: 5px;
+        }
+
+        header .lines {
+            margin: 0 30px;
+            margin-top: 30px;
+
+        }
+
+
+        header .btn {}
+
+        header .btn a {
+            text-decoration: none;
+            color: white;
+            background: #1F4E78;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        header .btn {
+            margin-top: 20px;
+        }
+
+
+        .cart .allInfo {
+            /* margin: 10px; */
+            padding: 0px 0px 10px 0px;
+        }
+
+
+
+
+
+
+
+        /* ========================  footer ======================*/
+        footer {
+            display: flex;
+            background-color: #1F4E78;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            /* margin: 0; */
+            padding: 10px 10px;
+        }
+
+        footer h3 {
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -547,92 +621,135 @@
 
 
     <header>
-        <img src="{% static 'images/img4.png' %}">
-        <div class="left_text">
+
+        <img class="coverPhoto" src="{% static 'images/road.jpg' %}">
+        <div class="lines">
             <p class="firstLine">A cleaner, safer and better Dhaka</p>
-            <h1 class="second_line">Let's make Dhaka's</h1>
-            <h1 class="third_line">Road better</h1>
+            <h1 class="second_line">Let's make Dhaka's Road better</h1>
             <p class="fourthLine">Report Road Problems and help build safer, smoother streets for everyone.</p>
             <div class="btn">
-                <a href="report_form">Report a Problem</a>
-                <a href="">View my Reports</a>
+                <a href="{% url 'report_form' %}">Report a Problem</a>
+                <a href="{% url 'report_form' %}">View my Reports</a>
             </div>
         </div>
+
     </header>
 
 
 
     <main class="main_section">
-        <h2 class="recent_road_problems_text">Recent Road Problems</h2>
+        <div class="reportSection">
+            <h3 class="ReporSectionheadline">Making roads safer, together</h3>
+            <div class="status">
+
+
+                <div class="box">
+                    <div class="text">
+                        <p class="firstline">Reports</p>
+                        <p class="secondline">Road Issues</p>
+                    </div>
+
+                </div>
+
+
+                <div class="box">
+                    <div class="text">
+                        <p class="firstline">Pending</p>
+                        <p class="secondline">waiting for action</p>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="box">
+                    <div class="text">
+                        <p class="firstline">Resolved</p>
+                        <p class="secondline">Fixed issues</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
 
         <div class="all_cart">
-
+            <h2 class="recent_road_problems_text">Recent Road Problems</h2>
             {% for reports in all_report %}
             <div class="cart">
+                <div class="allInfo">
 
-                <div class="issue_status">
-                    <!--<p class="issue">Issue # {{reports.create_date|date:'Ymd'}}-{{reports.id|stringformat:'04d'}}</p>
+
+
+
+
+
+
+                    <div class="issue_status">
+                        <!--<p class="issue">Issue # {{reports.create_date|date:'Ymd'}}-{{reports.id|stringformat:'04d'}}</p>
                 -->
-                    <p class="issue">Report : {{reports.id|stringformat:'06d'}}</p>
+                        <p class="issue">Report : {{reports.id|stringformat:'06d'}}</p>
 
-                    <p class="prb_category">{{reports.get_category_display}}</p>
+                        <p class="prb_category">{{reports.get_category_display}}</p>
 
-                    <p class="status-{{reports.status}}">{{reports.get_status_display}}</p>
-                </div>
+                        <p class="status-{{reports.status}}">{{reports.get_status_display}}</p>
+                    </div>
 
-                <div class="location">
-                    <p class="prb_area">
-                        <img src="{% static 'images/location.png' %}">
+                    <div class="location">
+                        <p class="prb_area">
+                            <img src="{% static 'images/location.png' %}">
 
-                        {{reports.location}} , {{reports.road_information}}
-                    </p>
-
-
-                </div>
+                            {{reports.location}} , {{reports.road_information}}
+                        </p>
 
 
-                <div class="title_category_description">
-
-                    <!-- <p class="prb_category">{{reports.get_category_display}}</p> -->
-                    <p class="prb_name"><strong>{{reports.title}}</strong></p>
-                    <p class="prb_description"> {{reports.additional_details}}</p>
+                    </div>
 
 
-                </div>
+                    <div class="title_category_description">
 
-                <div class="Photos_and_viewDetails">
+                        <!-- <p class="prb_category">{{reports.get_category_display}}</p> -->
+                        <p class="prb_name"><strong>{{reports.title}}</strong></p>
+                        <p class="prb_description"> {{reports.additional_details}}</p>
 
 
-                    <div class="photoViewsDetails">
-                        {% if reports.photo %}
-                        <p class="showPhoto">
-                            <img src="{% static 'images/photoIcon.png' %}">
-                            1 photo
+                    </div>
 
-                            <!--   {% if reports.photo %}
+                    <div class="Photos_and_viewDetails">
+
+
+                        <div class="photoViewsDetails">
+                            {% if reports.photo %}
+                            <p class="showPhoto">
+                                <img src="{% static 'images/photoIcon.png' %}">
+                                1 photo
+
+                                <!--   {% if reports.photo %}
                             1 photo
                             {% else %}
                             0 photo
                             {% endif%}
                         -->
-                            {% endif%}
-                        </p>
+                                {% endif%}
+                            </p>
 
 
-                        <button class="view_details">
-                            <a href="{% url 'specific_report_details' reports.id %}">
-                                View Details
-                            </a>
-                        </button>
+                            <button class="view_details">
+                                <a href="{% url 'specific_report_details' reports.id %}">
+                                    View Details
+                                </a>
+                            </button>
+                        </div>
+
+
+
                     </div>
 
 
 
                 </div>
-
-
-
-
 
             </div>
 
@@ -640,6 +757,15 @@
         </div>
 
     </main>
+
+
+
+
+    <footer>
+
+        <h3>RoadFix</h3>
+        <p>&copy;2026</p>
+    </footer>
 
 </body>
 

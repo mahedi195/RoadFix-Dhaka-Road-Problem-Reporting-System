@@ -55,7 +55,7 @@ def dashboard(request):
 
 
 def report_list(request):
-    all_report = Report.objects.all().order_by("-create_date")
+    all_report = Report.objects.all().order_by("-create_date")[:2]
     return render(request, "index.html", {"all_report": all_report})
 
 

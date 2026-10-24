@@ -9,43 +9,23 @@
     <title>My Profile</title>
 
     <style>
-        .image_and_name_section img {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            /* border: 1px solid #163B32; */
-            box-shadow: 5px 5px 13px #163B32;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .image_and_name_section .name_userName {}
-
-        .image_and_name_section .name_userName p {}
-
         .image_and_name_section {
             display: flex;
             align-items: center;
-            gap: 20px;
-            border: 1px solid red;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 30px;
         }
 
-        .image_and_name_section .firstLastName {
-            /* margin-top: 20px; */
-            margin-bottom: 60px;
-            margin-top: 0px;
-            color: #163B32;
-            /* font-weight: bold; */
-            font-size: 23px;
-            font-weight: 500;
-        }
 
-        .image_and_name_section .username,
-        .image_and_name_section .joined {
-            margin-top: 0px;
-            margin-bottom: 0px;
+        .image_and_name_section .fullanme {
+            margin: 0;
             font-size: 20px;
-            color: #676767;
+
+        }
+
+        .image_and_name_section img {
+            width: 150px;
         }
 
 
@@ -81,21 +61,21 @@
 
 
         .personalInfo .right {
-            color: #163B32;
+            color: #1F4E78;
             font-weight: bold;
         }
 
         body {
             margin: 0;
             /* width: 620px; */
+            background-color: #e0e3e5;
         }
 
         .myAllReport {
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 20px;
-            color: #163B32;
-            font-weight: bols;
+            color: #1F4E78;
             font-weight: bold;
         }
 
@@ -230,14 +210,12 @@
 </head>
 
 <body>
-    <h1>My profile page</h1>
+    <!--  <h1>My profile page</h1> -->
     <div class="image_and_name_section">
         <img src="{% static 'images/profilePic.jpg' %}">
-        <div class="name_userName">
-            <p class="firstLastName">{{user.first_name}} {{user.last_name}}</p>
-            <p class="username">@{{user.username}}</p>
-            <p class="joined">Joined on {{user.date_joined|date:'d.m.Y, h:i A'}}</p>
-        </div>
+
+        <p class="fullanme">{{user.first_name}} {{user.last_name}}</p>
+
     </div>
 
 
@@ -329,7 +307,7 @@
 
 
 
-    
+
     <div class="allReports">
         {% for report_i in myAllReports %}
         <div class="info">
@@ -338,7 +316,7 @@
             <p> {{report_i.get_category_display}}</p>
             <p> {{report_i.get_status_display}}</p>
             <p> {{report_i.create_date|date:'d.m.Y h:i a'}}</p>
-            
+
             <p class="viewReport">
                 <a href="{% url 'specific_report_details' report_i.id %}">view→</a>
             </p>
@@ -351,7 +329,7 @@
     </div>
 
 
-    
+
 
 
 
