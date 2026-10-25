@@ -77,7 +77,10 @@
 
             <div class="photoUpload">
                 <label>Upload a Photo (optional) </label>
-                <input  name="uploaded_photo" type="file" accept="image/*">
+                <input  name="uploaded_photo" type="file" accept="image/*" style="cursor: pointer;">
+                <img src=""  class="showPhoto"  
+                              style="width: 550px; height: 400px; display: none;
+                                     object-fit: contain; margin-top: 15px; cursor: pointer; ">
 
             </div>
 
@@ -112,6 +115,8 @@
     </form>
 
 {% include 'footer.html' %}
+
+<script src="{% static 'js/reportForm.js' %}"></script>
 
 </body>
 
