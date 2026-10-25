@@ -1,0 +1,121 @@
+ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+          /*  display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; */
+        }
+
+        .report_details {
+            width: 650px;
+            border: 1px solid #c5c3c3;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 5px 10px #c5c3c3;
+            margin: 35px auto;
+
+        }
+
+
+
+        .report_title p {
+            margin: 0;
+        }
+
+        .report_title h2 {
+            /* margin: 0; */
+            /* margin: 15px 0px; */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+
+        .status_and_createDate {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status_and_createDate p {
+            margin: 0;
+
+        }
+
+        .status_and_createDate .date {}
+
+        .image_and_details {
+            /* display: grid; */
+            /* grid-template-columns: 1fr 1fr; */
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .image_and_details .photo {}
+
+
+        .image_and_details img {
+            border-radius: 10px;
+            object-fit: cover;
+            /* height: auto; */
+            width: 300px;
+            height: 180px;
+        }
+
+        .image_and_details p {
+            margin: 0;
+            /* line-height: 1.4; */
+        }
+
+        .details p {
+            margin-bottom: 4px;
+        }
+
+        .location_details_text {
+            /* font-weight: bold; */
+            /* margin: 0; */
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #163b32;
+        }
+
+
+        .pending {
+            color: rgb(180, 106, 9);
+            background-color: rgb(243, 224, 199);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .in_progress {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .resolved {
+            color: rgb(34, 175, 34);
+            background-color: rgb(112, 224, 112);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .details {
+            border: 1px solid rgb(209, 208, 208);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+        .no_photo {
+            color: #474545;
+        }

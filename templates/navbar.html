@@ -1,17 +1,244 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
+    <style>
+        nav {
+            position: relative;
+            /* padding: 10px 20px; */
+        }
+
+
+        .logo_and_roadFix img {
+            width: 30px;
+
+        }
+
+        .logo_and_roadFix h1 {
+            margin: 0;
+            color: white;
+        }
+
+
+        .logo_and_roadFix {
+            display: flex;
+        }
+
+        nav .othersOption {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+        }
+
+        nav .register_login {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 0;
+            /* padding: 6px 20px; */
+            background-color: #1F4E78;
+        }
+
+        .register_loginPage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .othersOption a {
+            position: relative;
+        }
+
+        .othersOption a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            left: 0;
+            bottom: 0px;
+            transition: width 0.3s ease;
+
+        }
+
+        .othersOption a:hover::after {
+            width: 100%;
+        }
+
+        .image_and_name img {
+            width: 20px;
+            background: transparent;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 6px;
+        }
+
+        .image_and_name {
+            display: flex;
+            align-items: center;
+
+            margin-right: 40px;
+        }
+
+
+        .profile .username {
+            font-size: 20px;
+            color: white;
+        }
+
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            background-color: #1F4E78;
+
+            padding: 10px 0px 2px 20px;
+        }
+
+
+        .profile {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .profile ul {
+            position: absolute;
+            /* display: none; */
+            width: 100%;
+            list-style: none;
+            top: 100%;
+            left: 0;
+            padding: 5px 0px;
+            background-color: white;
+            z-index: 100;
+
+
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            /* Starts slightly shifted up */
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+
+
+        }
+
+        .profile:hover ul {
+            /*   display: block;*/
+
+
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+
+        }
+
+        .profile ul li {
+            color: #1F4E78;
+        }
+
+
+
+        .profile ul li a {
+            display: block;
+            padding: 3px 15px;
+            color: #1F4E78;
+            text-decoration: none;
+
+
+        }
+
+        .profile ul li a:hover {
+            color: #f0f0f0;
+            background-color: #1F4E78;
+
+        }
+
+        .profile li {
+            width: 100%;
+            border-bottom: 1px solid gray;
+
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
 
+
+
     <nav>
-        
+        <div class="logo_and_roadFix">
+      
+            <h1>RoadFix</h1>
+        </div>
+
+
+
+
+        <div class="othersOption">
+            <a href="{% url 'Dashboard' %}">Dashboard</a>
+            <a href="{% url 'allReports' %}">All Reports</a>
+            <a href="{% url 'report_form' %}">Report Problem</a>
+        </div>
+
+
+
+        <div class="register_login">
+            {% if user.is_authenticated %}
+
+            <div class="profile">
+                <div class="image_and_name">
+                    <img src="{% static 'images/location.png' %}">
+                    <span class="username">{{user.username}}</span>
+                </div>
+
+                <ul>
+                    <li><a href="{% url 'myProfilePage' %}">My Profile</a></li>
+                    <li><a href="{% url 'logoutOption' %}">Logout</a></li>
+                </ul>
+
+
+            </div>
+            {% else %}
+            <div class="register_loginPage">
+
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'loginPage' %}">Login</a>
+
+            </div>
+
+            {% endif %}
+
+        </div>
     </nav>
 
 
 
 </body>
+
 </html>

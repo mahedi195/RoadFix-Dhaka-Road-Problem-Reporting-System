@@ -6,212 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Page</title>
-
-    <style>
-        .dashboard_text h2 {
-            margin: 0;
-            margin-bottom: 3px;
-            font-size: 30px;
-
-        }
-
-        .dashboard_text p {
-            margin: 0;
-            color: #6B7280;
-            font-size: 19px;
-            margin-bottom: 10px;
-        }
-
-        .box {
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            padding-left: 20px 0px 10px 10px;
-            padding: 15px 10px 10px 20px;
-        }
-
-        .reportBox {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            /* padding: 50px;*/
-        }
-
-        .box p {
-            margin: 0;
-        }
-
-        .box .number {
-            font-size: 45px;
-            FONT-WEIGHT: bold;
-        }
-
-        .box.total .number {
-            color: #1D4ED8;
-            font-weight: bold;
-
-        }
-
-        .box.pending .number {
-            color: #B45309;
-            font-weight: bold;
-        }
-
-        .box.resolved .number {
-            color: #15803D;
-            font-weight: bold;
-        }
-
-        .box.solved .number {
-            color: #6D28D9;
-            font-weight: bold;
-        }
-
-
-        .box.total {
-            border: 2px solid #c7d1ed;
-        }
-
-        .box.pending {
-            border: 2px solid #F5DEAA;
-        }
-
-        .box.resolved {
-            border: 2px solid #BCE8D0;
-        }
-
-        .box.solved {
-            border: 2px solid #DDCCFA;
-        }
-
-        .box .label {
-            color: rgb(95 93 93);
-            font-size: 19px;
-        }
-
-        .dashboard_text h2 {
-            margin: 0;
-            margin-bottom: 3px;
-            color: #1F4E78;
-        }
-
-        .recentReportsText h3 {
-            color: #1F4E78;
-            margin-top: 15px;
-            margin-bottom: 10px;
-            font-size: 25px;
-           /* margin-top: 40px; */
-        }
-
-        .recentReports .cart p {
-            margin: 3px;
-
-        }
-
-        .cart h3 {
-            margin: 0;
-            margin-bottom: 3px;
-        }
-
-
-
-        .cart .title {
-            color: #1F4E78;
-        }
-
-        .cart .pending {
-            color: rgb(180, 106, 9);
-            background-color: rgb(243, 224, 199);
-            padding: 4px 25px;
-            border-radius: 20px
-        }
-
-        .cart .resolved {
-            color: #166534;
-            background-color: #DCFCE7;
-            padding: 4px 25px;
-            border-radius: 20px
-        }
-
-        .cart .in_progress {
-            color: #3730a3;
-            background-color: #e0e7ff;
-            padding: 4px 25px;
-            border-radius: 20px
-        }
-
-        .title_status {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 0px;
-            margin-bottom: 5px;
-        }
-
-        .cart p {
-            margin: 0;
-        }
-
-        .date_viewMore {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-        }
-
-        .date_viewMore a {
-            color: #0F766E;
-            text-decoration: none;
-        }
-
-        .cart .location {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-
-        .cart {
-            /* padding: 10px 20px; */
-            background: white;
-            margin-bottom: 20px;
-            padding: 15px 25px;
-            border-radius: 15px;
-        }
-
-
-        body {
-            margin: 0;
-            background-color: #dce1e5;
-            padding: 0px 50px;
-            margin: 50px 0px;
-        }
-
-        .date_viewMore .viewDetails {
-            font-size: 19px;
-            background-color: #0F766E;
-            padding: 5px 25px;
-            border-radius: 20px;
-            color: white;
-            transition: transform 0.3s ease,
-                background-color 0.3s ease;
-
-        }
-
-        .date_viewMore .viewDetails:hover {
-            background-color: #115E59;
-            transform: scale(1.02);
-
-        }
-
-
-        .recentReports .cart p {
-            /* margin: 3px; */
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/allReports.css' %}">
 </head>
 
 <body>
+
+    {% include 'navbar.html' %}
 
     <div class="dashboard_text">
         <h2 class="">All reports</h2>
@@ -230,10 +30,10 @@
         -->
             <div class="title_status">
                 <h3 class="title" style="font-size: 22px;"> {{reportX.title}}</h3>
-                <p class="{{reportX.status}}" style="font-size: 19px;">{{reportX.get_category_display}}</p>
+                <p class="{{reportX.status}}" style="font-size: 19px;">{{reportX.get_status_display}}</p>
             </div>
             <div class="location" style="color:  #6B7280; font-size: 19px;">
-                <img src="{% static 'images/location.png' %} " style="width: 20px;">
+                <img src="{% static 'images/location.png' %} " alt="location pic" style="width: 20px;">
                 {{reportX.location}}
             </div>
             <div class="date_viewMore">
@@ -245,15 +45,15 @@
         </div>
 
 
+    
+
+        {% empty %}
+        <h2>Sorry, No reports available</h2>
+        {% endfor%}
     </div>
 
-    {% empty %}
-    <h2>Sorry, No reports available</h2>
-    {% endfor%}
-    </div>
 
-
-
+    {% include 'footer.html' %}
 
 
 

@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 
 
 class Report(models.Model):
-
     CATEGORY_CHOICES = [
         ("pothole", "Pothole"),
         ("damaged_road", "Damaged Road"),

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,126 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Problem</title>
+    <link rel="stylesheet" href="{% static 'css/reportForm.css' %}">
 
 
     <style>
-        h1 {
-            color: #163b32;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-bottom: 20px;
-        }
-
-        .group {
-            display: flex;
-            flex-direction: column;
-            margin-right: 10px;
-            margin-bottom: 15px;
-
-        }
-
-        input,
-        select,
-        textarea {
-            border-radius: 5px;
-            outline: 0;
-            border: 1px solid #b7b7b7;
-            padding: 8px 12px;
-            font-size: 15px;
-            box-shadow: 0px 2px 10px #c5c3c3;
-        }
-
-        label {
-            /* border-bottom: 100px; */
-            margin-bottom: 5px;
-        }
-
-
-        .frutherDetails {
-            /* display: grid; */
-            margin-top: 20px;
-            /* min-height: 300px; */
-            /* width: 100%; */
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        textarea {
-            min-height: 100px;
-
-            /* resize: vertical; */
-            min-height: 80px;
-        }
-
-
-        .submit {
-            display: flex;
-            width: 100%;
-            /* display: grid; */
-            /* grid-template-columns: 1fr; */
-            outline: 0;
-            border: 1px solid #b4b1b1;
-            border-radius: 5px;
-            padding: 10px;
-            /* text-align: center; */
-            color: white;
-            margin: 0 auto;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            background-color: #1F4E78;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 10px #c5c3c3;
-
-            cursor: pointer;
-        }
-
-
-        .back_to_home span {
-            color: #1F4E78;
-        }
-
-
-        .full_form {
-            margin: 0;
-            padding: 10px;
-            max-width: 750px;
-            margin: 50px auto;
-            border-radius: 5px;
-            color: black;
-
-        }
-
-        .back_to_home {
-            cursor: pointer;
-        }
-
-        .back_to_home a {
-            text-decoration: none;
-        }
-
-        .report_a_prb_text {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 45px;
-            color: #1F4E78;
-        }
-
-        body{
-            background-color: #e0e3e5;
-        }
-
-        .full_form{
-            background-color: white;
-        }
+     
     </style>
 </head>
 
 <body>
+
+    {% include 'navbar.html' %}
 
     <form action="" method="POST" enctype="multipart/form-data">
 
@@ -219,7 +111,7 @@
 
     </form>
 
-
+{% include 'footer.html' %}
 
 </body>
 
