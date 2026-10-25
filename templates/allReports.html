@@ -5,55 +5,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Page</title>
+    <title>All Reports</title>
     <link rel="stylesheet" href="{% static 'css/allReports.css' %}">
 </head>
 
+
+
+
 <body>
 
+
     {% include 'navbar.html' %}
+    <div class="allReportPage">
 
-    <div class="dashboard_text">
-        <h2 class="">All reports</h2>
-        <p>Welcome to all reports page. Here's an overview of user's reports</p>
-    </div>
+        <div class="dashboard_text">
+            <h2 class="">All reports</h2>
+            <p>Welcome to all reports page. Here's an overview of user's reports</p>
+        </div>
 
+ 
+        <div class="search_titile_status">
 
-    <div class="recentReportsText">
-        <h3>Recent Reports</h3>
-    </div>
-
-    <div class="recentReports">
-        {% for reportX in allReports%}
-        <div class="cart">
-            <!-- <p>{{reportX.id}}</p>
-        -->
-            <div class="title_status">
-                <h3 class="title" style="font-size: 22px;"> {{reportX.title}}</h3>
-                <p class="{{reportX.status}}" style="font-size: 19px;">{{reportX.get_status_display}}</p>
+            <form method="POST">
+                {% csrf_token %}
+               <div class="input_button">
+                    <input type="text" placeholder="Search reports by title.." 
+                    name="searching" 
+                    value="{{SEarching_text}}"
+                    style="outline: none;">
+                    <button type="submit">Search</button>
             </div>
-            <div class="location" style="color:  #6B7280; font-size: 19px;">
-                <img src="{% static 'images/location.png' %} " alt="location pic" style="width: 20px;">
-                {{reportX.location}}
-            </div>
-            <div class="date_viewMore">
-                <p class="" style="color:  #6B7280; font-size: 19px;"> {{reportX.create_date|date:'d M Y'}}</p>
-                <a href="{% url 'specific_report_details' reportX.id %}" class="viewDetails">
-                    View Details
-                </a>
-            </div>
+                </form>
+
+            <p class="searchesEx">Example searches: Pothole, Damaged Road, Waterlogging, Broken Streetlight,Other,
+                Pending, In Progress, Resolved
+            </p>
         </div>
 
 
-    
 
-        {% empty %}
-        <h2>Sorry, No reports available</h2>
-        {% endfor%}
+
+        {% if allReports %}
+
+        
+        <div class="recentReportsText">
+            <h3>Recent Reports</h3>
+        </div>
+
+
+        <div class="recentReports">
+            {% for reportX in allReports%}
+            <div class="cart">
+                <!-- <p>{{reportX.id}}</p>
+               -->
+                <div class="title_status">
+                    <h3 class="title" style="font-size: 22px;"> {{reportX.title}}</h3>
+                    <p class="{{reportX.status}}" style="font-size: 19px;">{{reportX.get_status_display}}</p>
+                </div>
+                <div class="location" style="color:  #6B7280; font-size: 19px;">
+                    <img src="{% static 'images/location.png' %} " alt="location pic" style="width: 20px;">
+                    {{reportX.location}}
+                </div>
+                <div class="date_viewMore">
+                    <p class="" style="color:  #6B7280; font-size: 19px;"> {{reportX.create_date|date:'d M Y'}}</p>
+                    <a href="{% url 'specific_report_details' reportX.id %}" class="viewDetails">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+
+            {% endfor%}
+        </div>
+
+        {% else %}
+        <h2 class="Sorry">Sorry, No reports available</h2>
+
+
+        {% endif %}
+
     </div>
 
 
     {% include 'footer.html' %}
+
 
 
 

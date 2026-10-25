@@ -15,14 +15,30 @@ from django.shortcuts import render, redirect
 from .models import Report
 
 
+from django.db.models import Q
+
+
 
 def allReport(request):
-    allReports = Report.objects.all().order_by('-create_date')
+    allReports = Report.objects.all()    
+    SEARCH_text=""
+    if request.method=='POST':
+        SEARCH_text=request.POST.get('searching').strip()
+
+    allReports=allReports.order_by('-create_date')
+    if SEARCH_text:
+        allReports=allReports.filter(
+            Q(title__icontains=SEARCH_text)|
+            Q(status__icontains=SEARCH_text)
+        )
+
+    
     return render(
             request,
             "allReports.html",
             {
                 "allReports":allReports,
+                "SEarching_text":SEARCH_text,
 
             },
         )
