@@ -1,26 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" >
 
 
     <style>
-          /* ========================  footer ======================*/
-        footer {
-            display: flex;
-            background-color: #1F4E78;
-            color: white;
-            justify-content: center;
-            align-items: center;
-            /* margin: 0; */
-            padding: 10px 10px;
-        }
-
-        footer h3 {
-            margin-right: 20px;
-        }
     </style>
 </head>
 
@@ -32,7 +20,16 @@
     <footer>
 
         <h3>RoadFix</h3>
+        &nbsp;&nbsp;
         <p>&copy;2026</p>
+        &nbsp;&nbsp;
+        <p class="DevelopName">
+            Developed by <a href="https://github.com/mahedi195" target="_blank">
+                <span class="developer">
+                    Mahedi Hasan
+                    </span>
+                </a>
+        </p>
     </footer>
 
 
