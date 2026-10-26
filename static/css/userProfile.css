@@ -1,197 +1,205 @@
  .image_and_name_section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: 30px;
-        }
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     margin-top: 30px;
+ }
 
 
-        .image_and_name_section .fullanme {
-            margin: 0;
-            font-size: 20px;
+ .image_and_name_section .fullanme {
+     margin: 0;
+     font-size: 20px;
 
-        }
+ }
 
-        .image_and_name_section img {
-            width: 150px;
-        }
-
-
-
-        .personalInformation p {
-            margin: 0;
-        }
-
-        .personalInformation {
-            /* margin: 30px 0px; */
-            font-size: 20px;
-            color: #163B32;
-            font-weight: bold;
-            margin-top: 50px;
-            margin-bottom: 15px;
-        }
-
-        .personalInfo p {
-            margin: 0;
-        }
-
-        .personalInfo .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 5px 0px;
-            font-size: 19px;
-        }
-
-        .personalInfo .left {
-            color: #393939;
-        }
-
-
-        .personalInfo .right {
-            color: #1F4E78;
-            font-weight: bold;
-        }
-
-        body {
-            margin: 0;
-            /* width: 620px; */
-            background-color: #e0e3e5;
-        }
-
-        .myAllReport {
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
-            color: #1F4E78;
-            font-weight: bold;
-        }
-
-        .reportBox {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
+ .image_and_name_section img{
+     width: 150px;
+ }
 
 
 
-        .box {
-            /* border: 1px solid #163B32;*/
-            border-radius: 5px;
-            text-align: center;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+ .personalInformation p {
+     margin: 0;
+ }
 
-        .total {
-            color: #0F172A;
-            background-color: #F1F5F9;
-        }
+ .personalInformation {
+     /* margin: 30px 0px; */
+     font-size: 20px;
+     color: #163B32;
+     font-weight: bold;
+     margin-top: 50px;
+     margin-bottom: 15px;
+ }
 
-        .pending {
-            color: rgb(180, 106, 9);
-            background-color: rgb(243, 224, 199);
-        }
+ .personalInfo p {
+     margin: 0;
+ }
 
-        .in_progress {
-            background-color: #e0e7ff;
-            color: #3730a3;
-        }
+ .personalInfo .row {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 5px 0px;
+     font-size: 19px;
+ }
 
-        .resolved {
-            color: #166534;
-            background-color: #DCFCE7;
-        }
-
-        .value_and_status p {
-            margin: 0;
-        }
+ .personalInfo .left {
+     color: #393939;
+ }
 
 
+ .personalInfo .right {
+     color: #1F4E78;
+     font-weight: bold;
+ }
 
-        .value_and_status .value {
-            font-size: 33px;
-            font-weight: bold;
-        }
+ body {
+     margin: 0;
+     /* width: 620px; */
+     background-color: #e0e3e5;
+ }
 
-        .value_and_status .status {
-            font-size: 20px;
+ .myAllReport {
+     margin-top: 30px;
+     margin-bottom: 15px;
+     font-size: 20px;
+     color: #1F4E78;
+     font-weight: bold;
+ }
 
-        }
-
-        .myReportsText {
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        .myReportsText h3 {
-            margin: 0;
-            color: #163B32;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .info {
-            margin-bottom: 0px;
-            /* display: flex; */
-            /* align-items: center; */
-            display: grid;
-            grid-template-columns: 80px 300px 200px 100px 200px 100px;
-            align-items: center;
-            gap: 20px;
-            /* border: 1px solid red; */
-            padding: 6px 0px;
-            /* background: green;*/
-        }
-
-        .reportHeading p {
-            margin: 0;
-        }
-
-        .reportHeading {
-            display: grid;
-            display: grid;
-            grid-template-columns: 80px 300px 200px 100px 200px 100px;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 13px;
-            background-color: #1F4E78;
-            padding: 7px 0px;
-            font-size: 18px;
-            color: white;
-            margin: 0;
-        }
+ .reportBox {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+ }
 
 
-        .info:nth-child(odd) {
-            background-color: #d1dfeb;
-        }
 
-        .info:nth-child(even) {
-            background-color: #FFFFFF;
-        }
+ .box {
+     /* border: 1px solid #163B32;*/
+     border-radius: 5px;
+     text-align: center;
+     height: 80px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
-        .reportHeading .title {
-            text-align: center;
-        }
+ .total {
+     color: #0F172A;
+     background-color: #F1F5F9;
+ }
 
-        .info p {
-            margin: 0;
-            font-size: 18px;
-            margin: 0;
-            color: #2b2a2a;
-        }
+ .pending {
+     color: rgb(180, 106, 9);
+     background-color: rgb(243, 224, 199);
+ }
 
-        .allReports {
-            margin-bottom: 50px;
-        }
+ .in_progress {
+     background-color: #e0e7ff;
+     color: #3730a3;
+ }
 
-        .info .viewReport {}
+ .resolved {
+     color: #166534;
+     background-color: #DCFCE7;
+ }
 
-        .info .viewReport a {
-            text-decoration: none;
-            color: black;
-        }
+ .value_and_status p {
+     margin: 0;
+ }
+
+
+
+ .value_and_status .value {
+     font-size: 33px;
+     font-weight: bold;
+ }
+
+ .value_and_status .status {
+     font-size: 20px;
+
+ }
+
+ .myReportsText {
+     margin-top: 30px;
+     margin-bottom: 15px;
+ }
+
+ .myReportsText h3 {
+     margin: 0;
+     color: #163B32;
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .info {
+     margin-bottom: 0px;
+     /* display: flex; */
+     /* align-items: center; */
+     display: grid;
+     grid-template-columns: 80px 300px 200px 100px 200px 100px;
+     align-items: center;
+     gap: 20px;
+     /* border: 1px solid red; */
+     padding: 6px 0px;
+     /* background: green;*/
+ }
+
+ .reportHeading p {
+     margin: 0;
+ }
+
+ .reportHeading {
+     display: grid;
+     display: grid;
+     grid-template-columns: 80px 300px 200px 100px 200px 100px;
+     align-items: center;
+     gap: 20px;
+     margin-bottom: 13px;
+     background-color: #1F4E78;
+     padding: 7px 0px;
+     font-size: 18px;
+     color: white;
+     margin: 0;
+ }
+
+
+ .info:nth-child(odd) {
+     background-color: #d1dfeb;
+ }
+
+ .info:nth-child(even) {
+     background-color: #FFFFFF;
+ }
+
+ .reportHeading .title {
+     text-align: center;
+ }
+
+ .info p {
+     margin: 0;
+     font-size: 18px;
+     margin: 0;
+     color: #2b2a2a;
+ }
+
+ .allReports {
+     margin-bottom: 50px;
+ }
+
+ .info .viewReport {}
+
+ .info .viewReport a {
+     text-decoration: none;
+     color: black;
+ }
+
+
+ .image_and_name_section img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+
