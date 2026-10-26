@@ -11,6 +11,7 @@
         .logo_and_roadFix h1 {
             margin: 0;
             color: white;
+            margin-left: 60px;
         }
 
 
@@ -21,7 +22,7 @@
         nav .othersOption {
             display: flex;
             align-items: center;
-           /* gap: 50px;*/
+            /* gap: 50px;*/
 
         }
 
@@ -187,14 +188,14 @@
             display: flex;
             align-items: center;
             /* justify-content: center; */
-           /* gap: 60px*/
+            /* gap: 60px*/
         }
 
-        .hidden_when_mobile_Active{
+        .hidden_when_mobile_Active {
             gap: 25px;
         }
 
-        nav .othersOption{
+        nav .othersOption {
             gap: 20px;
         }
 
@@ -265,19 +266,22 @@
                 width: 100vw;
             }
 
-            .register_login ul{
-                        margin-top: 0px;
+            .register_login ul {
+                margin-top: 0px;
             }
-            .profile{
+
+            .profile {
                 width: 100vw;
             }
 
-            .image_and_name{
+            .image_and_name {
                 margin-top: 10px;
                 margin-left: 15px;
             }
-            .profile li{
+
+            .profile li {
                 margin-top: 10px;
+              
             }
 
         }
