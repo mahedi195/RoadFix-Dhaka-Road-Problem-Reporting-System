@@ -18,15 +18,54 @@
               margin: 0;
           }
 
-          .DevelopName{
-            color: white;
-            font-size: 20px;
-          
+          .DevelopName {
+              color: white;
+              font-size: 20px;
+
           }
 
-          .developer{
-             color: white;
-            font-size: 20px;
-            text-decoration: underline;
-           
+          .developer {
+              color: white;
+              font-size: 20px;
+              text-decoration: underline;
+
           }
+
+
+          @media screen and (max-width:850px) {
+
+              footer {
+                  display: grid;
+                  grid-template-columns: repeat(1, minmax(0, 1fr));
+                  gap: 10px;
+                  justify-content: center;
+
+              }
+
+              footer h3,
+              footer p{
+                text-align: center;
+
+              }
+
+
+
+
+          }
+
+
+          
+          @media screen and (max-width:480px) {
+
+              footer {
+                  display: grid;
+                  grid-template-columns: repeat(1, minmax(0, 1fr));
+                  gap: 10px;
+
+              }
+
+
+
+
+          }
+
