@@ -6,45 +6,89 @@ from django.contrib.auth import authenticate, login, logout
 from reports.models import Report as reportAppReportClassModel
 
 
+def update_password(request):
+    user = request.user
+    if request.method == "GET":
+        return render(request, "updatePassword.html")
+    elif request.method == "POST":
+        old_pass = request.POST.get("oldPassworD")
+        new_pass = request.POST.get("newPsswoRD")
+        confirm_pass = request.POST.get("confirmPassWORD")
+
+        if not request.user.check_password(old_pass):
+            return render(
+                request,
+                "updatePassword.html",
+                {"old_password_not_matched": "Current password does not matched"},
+            )
+
+        if not new_pass:
+            return render(
+                request,
+                "updatePassword.html",
+                {
+                    "password_length_error": "New password is empty."
+                },
+            )
+
+        if len(new_pass) < 5:
+            return render(
+                request,
+                "updatePassword.html",
+                {
+                    "password_length_error": "Password length is less then five characters."
+                },
+            )
+
+        if new_pass != confirm_pass:
+            return render(
+                request,
+                "updatePassword.html",
+                {"new_confirm_password_not_matched": "Password not matched"},
+            )
+
+        user.set_password(new_pass)
+        user.save()
+        return render(request, "userProfile.html")
+
+
 def editProfile(request):
-    user=request.user
-    if request.method=='GET':
-        return render(request,'editProfile.html')
-    elif request.method=='POST':
-        fname=request.POST.get('first_namE')
-        lname=request.POST.get('last_namE')
-        userName=request.POST.get('usernaME')
-        eMail=request.POST.get('emaiL')
+    user = request.user
+    if request.method == "GET":
+        return render(request, "editProfile.html")
+    elif request.method == "POST":
+        fname = request.POST.get("first_namE")
+        lname = request.POST.get("last_namE")
+        userName = request.POST.get("usernaME")
+        eMail = request.POST.get("emaiL")
 
         if User.objects.filter(username=userName).exclude(id=user.id).exists():
-            return render(request,'editProfile.html',
-                          {
-                              'error_username':'This username already taken'
-                          })
+            return render(
+                request,
+                "editProfile.html",
+                {"error_username": "This username already taken"},
+            )
 
         if User.objects.filter(email=eMail).exclude(id=user.id).exists():
-            return render(request,'editProfile.html',
-                          {
-                              'error_email':'This email already taken'
-                          })
+            return render(
+                request, "editProfile.html", {"error_email": "This email already taken"}
+            )
 
-        user.first_name=fname
-        user.last_name=lname
-        user.username=userName
-        user.email=eMail
+        user.first_name = fname
+        user.last_name = lname
+        user.username = userName
+        user.email = eMail
 
         user.save()
 
-        return redirect('myProfilePage')
-
+        return redirect("myProfilePage")
 
 
 def userProfile(request):
-    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by('-create_date')
-    return render(request, "userProfile.html", 
-                  {
-                      "myAllReports": myReports
-                   })
+    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by(
+        "-create_date"
+    )
+    return render(request, "userProfile.html", {"myAllReports": myReports})
 
 
 def logout_user(request):
