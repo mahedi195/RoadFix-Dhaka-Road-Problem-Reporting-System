@@ -10,6 +10,13 @@ urlpatterns=[
     
     path('myProfile/',views.userProfile,name='myProfilePage'),
 
+    path('editProfile/',views.editProfile,name='editProfile')
+
+
+
+
+
+
 
 ]
 

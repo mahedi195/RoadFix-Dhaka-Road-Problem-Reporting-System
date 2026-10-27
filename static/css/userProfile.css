@@ -1,3 +1,12 @@
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+
+}
+
  .image_and_name_section {
      display: flex;
      align-items: center;
@@ -24,12 +33,13 @@
  }
 
  .personalInformation {
-     /* margin: 30px 0px; */
-     font-size: 20px;
-     color: #163B32;
-     font-weight: bold;
-     margin-top: 50px;
-     margin-bottom: 15px;
+/*margin: 30px 0px; */
+    font-size: 20px;
+  /*  color: #163B32;*/
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: #1F4E78;
  }
 
  .personalInfo p {

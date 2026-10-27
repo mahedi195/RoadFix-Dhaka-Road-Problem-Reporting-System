@@ -3,8 +3,40 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
-
 from reports.models import Report as reportAppReportClassModel
+
+
+def editProfile(request):
+    user=request.user
+    if request.method=='GET':
+        return render(request,'editProfile.html')
+    elif request.method=='POST':
+        fname=request.POST.get('first_namE')
+        lname=request.POST.get('last_namE')
+        userName=request.POST.get('usernaME')
+        eMail=request.POST.get('emaiL')
+
+        if User.objects.filter(username=userName).exclude(id=user.id).exists():
+            return render(request,'editProfile.html',
+                          {
+                              'error_username':'This username already taken'
+                          })
+
+        if User.objects.filter(email=eMail).exclude(id=user.id).exists():
+            return render(request,'editProfile.html',
+                          {
+                              'error_email':'This email already taken'
+                          })
+
+        user.first_name=fname
+        user.last_name=lname
+        user.username=userName
+        user.email=eMail
+
+        user.save()
+
+        return redirect('myProfilePage')
+
 
 
 def userProfile(request):
