@@ -27,7 +27,7 @@ def delete_reporT(request,id):
         if request.method=='POST':
             if report.status!='pending':
                # return confirm("You can't delete this report.coz it's status is not pending")
-               messages.error(request,"You can't delete this report.coz it's status is not pending")
+               messages.error(request,"You can't delete this report.It's status is not pending")
                return redirect('myProfilePage')
 
             else:
