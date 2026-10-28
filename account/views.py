@@ -85,10 +85,19 @@ def editProfile(request):
 
 
 def userProfile(request):
-    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by(
-        "-create_date"
-    )
-    return render(request, "userProfile.html", {"myAllReports": myReports})
+    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by("-create_date")
+    totalReports=myReports.count()
+    pending=myReports.filter(status='pending').count()
+    inProgress=myReports.filter(status='in_progress').count()
+    resolveD=myReports.filter(status='ressolved').count()
+    return render(request, "userProfile.html", 
+                  {
+                      "myAllReports": myReports,
+                      'totalReports': totalReports,
+                      'pending': pending,
+                      'inProgress':inProgress,
+                      'resolved':resolveD,
+                  })
 
 
 def logout_user(request):

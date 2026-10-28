@@ -1,68 +1,148 @@
- 
  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    font-family: Arial, sans-serif;
-
-}
-
- .image_and_name_section {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     margin-top: 30px;
- }
-
-
- .image_and_name_section .fullanme {
      margin: 0;
-     font-size: 20px;
+     padding: 0;
+     background-color: #f1f1f1;
+     font-family: Arial, sans-serif;
 
  }
 
- .image_and_name_section img{
-     width: 150px;
- }
-
-
-
- .personalInformation p {
-     margin: 0;
- }
-
- .personalInformation {
-/*margin: 30px 0px; */
-    font-size: 20px;
-  /*  color: #163B32;*/
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    color: #1F4E78;
- }
-
- .personalInfo p {
-     margin: 0;
- }
-
- .personalInfo .row {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 5px 0px;
-     font-size: 19px;
- }
-
- .personalInfo .left {
-     color: #393939;
- }
-
-
- .personalInfo .right {
+ .personalInformationText p {
      color: #1F4E78;
-     font-weight: bold;
  }
+
+
+ .edit_and_password .editBtn {
+     background-color: #1F4E78;
+     color: white;
+     cursor: pointer;
+     padding: 8px 18px;
+     font-size: 18px;
+     border: none;
+     outline: 0;
+     border-radius: 5px;
+ }
+
+
+ .edit_and_password .update_btn {
+     color: #1F4E78;
+     background-color: white;
+     cursor: pointer;
+     padding: 8px 18px;
+     font-size: 18px;
+     border: 1px solid #1F4E78;
+     outline: 0;
+     border-radius: 5px;
+ }
+
+ .edit_and_password {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .edit_and_password .update_btn:hover {
+     color: white;
+     transform: scale(1.02);
+
+ }
+
+ .edit_and_password .update_btn {
+
+     transition: transform 0.3s ease,
+         background-color 0.3s ease
+ }
+
+ .edit_and_password .update_btn a {
+     color: #1F4E78;
+ }
+
+ .edit_and_password button a {
+     text-decoration: none;
+ }
+
+
+
+ .personalInformationText p {
+     margin-bottom: 5px;
+     margin-top: 20px;
+ }
+
+ .edit_and_password {
+     margin-bottom: 20px;
+ }
+
+ .Information .block {
+     margin-bottom: 15px;
+ }
+
+ .block label {
+     color: gray;
+     font-size: 16px;
+     padding-left: 5px;
+ }
+
+ .block .val {
+     background-color: #d1dfeb;
+     padding: 10px 0px;
+     font-size: 16px;
+     padding-left: 5px;
+
+ }
+
+ .location img {
+     width: 20px;
+     height: 20px;
+     object-fit: contain;
+     margin-bottom: 0px;
+ }
+
+ .issue_status {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     font-size: 16px;
+     justify-content: space-between;
+     margin-bottom: 5px;
+ }
+
+
+
+ .location p {
+     display: flex;
+     align-items: center;
+ }
+
+ .location p span {
+     font-size: 16px;
+ }
+
+ .location {
+     margin-bottom: 10px;
+     margin-top: 2px;
+ }
+
+ .prb_description {
+     margin: 10px 0px;
+ }
+
+ .cart {
+     margin-bottom: 20px;
+     background-color: white;
+     border-radius: 5px;
+     padding: 25px;
+     box-shadow: 3px 5px 10px #c5c3c3;
+ }
+
+
+
+
+
+
+
+
+
+
+
 
  body {
      margin: 0;
@@ -71,9 +151,9 @@
  }
 
  .myAllReport {
-     margin-top: 30px;
-     margin-bottom: 15px;
-     font-size: 20px;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     font-size: 16px;
      color: #1F4E78;
      font-weight: bold;
  }
@@ -139,9 +219,12 @@
 
  .myReportsText h3 {
      margin: 0;
-     color: #163B32;
+     color: #1F4E78;
      font-size: 20px;
      font-weight: bold;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     font-size: 16px;
  }
 
  .info {
@@ -199,7 +282,6 @@
      margin-bottom: 50px;
  }
 
- .info .viewReport {}
 
  .info .viewReport a {
      text-decoration: none;
@@ -208,8 +290,103 @@
 
 
  .image_and_name_section img {
-    width: 150px;
-    border-radius: 50%;
-}
+     width: 150px;
+     border-radius: 50%;
+ }
 
+ .image_and_name_section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin: 20px 0px;
+ }
 
+ .personalInformationText p {
+     margin-bottom: 5px;
+     margin-top: 20px;
+     font-weight: bold;
+ }
+
+ .personalInfo_and_cart {
+     padding: 40px 60px;
+ }
+
+ .rep_status {
+     padding: 4px 12px;
+     border-radius: 20px;
+
+ }
+
+ .rep_category {
+     padding: 4px 12px;
+     border-radius: 20px;
+     background-color: #e0e7ff;
+     color: #3730a3;
+ }
+
+ button a {
+     text-decoration: none;
+     font-size: 15px;
+ }
+
+ button {
+     padding: 6px 20px;
+     border-radius: 5px;
+     border: none;
+
+ }
+
+ .edittBtn {
+     background-color: white;
+     border: 1px solid #1F4E78;
+ }
+
+ .deleteBtn {
+     color: white;
+     background-color: red;
+ }
+
+ .view_details_btn {
+     background-color: #1F4E78;
+     color: white;
+ }
+
+ .edittBtn a {
+     color: #1F4E78;
+
+ }
+
+ .deleteBtn a {
+     color: white;
+
+ }
+
+ .view_details_btn a {
+     color: white;
+
+ }
+
+ .editBtn a {
+     color: white;
+
+ }
+
+ .editBtn {
+     background-color: white;
+ }
+
+ .Photos_and_viewDetails {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 20px;
+ }
+
+ button {
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+ button:hover{
+    transform:scale(1.02);
+ }
