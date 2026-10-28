@@ -8,6 +8,6 @@ urlpatterns = [
     path("reportForm/", views.report_create, name="report_form"),
     path('report/<int:id>/' ,views.report_details,name='specific_report_details'),
     path('dashboardPage/',views.dashboard, name='Dashboard'),
-    path('reports/',views.allReport, name='allReports')
-
+    path('reports/',views.allReport, name='allReports'),
+    path('deleteReport/<int:id>',views.delete_reporT,name='delete_report'),
 ]

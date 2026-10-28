@@ -17,7 +17,28 @@ from .models import Report
 
 from django.db.models import Q
 
+from django.contrib import messages
+from django.shortcuts import get_object_or_404
 
+
+
+def delete_reporT(request,id):
+        report=get_object_or_404(Report,user=request.user,id=id)
+        if request.method=='POST':
+            if report.status!='pending':
+               # return confirm("You can't delete this report.coz it's status is not pending")
+               messages.error(request,"You can't delete this report.coz it's status is not pending")
+               return redirect('myProfilePage')
+
+            else:
+                report.delete()
+                messages.success(request,'report deleted successfully')
+                return redirect('myProfilePage')
+        else:
+            return redirect('myProfilePage')
+
+
+    #if Report.status!='pending':
 
 def allReport(request):
     allReports = Report.objects.all()    
