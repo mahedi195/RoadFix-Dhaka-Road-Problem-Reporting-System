@@ -21,60 +21,79 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404
 
 
+def reportEdit(request, id):
+    report = get_object_or_404(Report, user=request.user, id=id)
+    if request.method == "GET":
+        return render(request, "edit_report.html", {"record_row": report})
+    elif request.method == "POST":
 
-def delete_reporT(request,id):
-        report=get_object_or_404(Report,user=request.user,id=id)
-        if request.method=='POST':
-            if report.status!='pending':
-               # return confirm("You can't delete this report.coz it's status is not pending")
-               messages.error(request,"You can't delete this report.It's status is not pending")
-               return redirect('myProfilePage')
+        # report=get_object_or_404(Report,user=request.user,id=id)
+        report.title = request.POST.get("titlE")
+        report.description = request.POST.get("descriptioN")
+        report.category = request.POST.get("categorY")
+        #report.status = request.POST.get("status")
+        report.location = request.POST.get("locatioN")
+        report.road_information = request.POST.get("road_informatioN")
+        report.landmarks = request.POST.get("landmarKS")
+        report.additional_details = request.POST.get("additional_detaiLS")
 
-            else:
-                report.delete()
-                messages.success(request,'report deleted successfully')
-                return redirect('myProfilePage')
+        photo = request.FILES.get("uploaded_photo")
+        if photo:
+            report.photo = photo
+        report.save()
+        messages.success(request, "Report updated successfully!")
+        return render(request, "userProfile.html")
+
+
+# return render(request, 'reportEdit.html', {'reportABCD': report})
+
+
+def delete_reporT(request, id):
+    report = get_object_or_404(Report, user=request.user, id=id)
+    if request.method == "POST":
+        if report.status != "pending":
+            # return confirm("You can't delete this report.coz it's status is not pending")
+            messages.error(
+                request, "You can't delete this report.It's status is not pending"
+            )
+            return redirect("myProfilePage")
+
         else:
-            return redirect('myProfilePage')
+            report.delete()
+            messages.success(request, "report deleted successfully")
+            return redirect("myProfilePage")
+    else:
+        return redirect("myProfilePage")
 
 
-    #if Report.status!='pending':
+# if Report.status!='pending':
+
 
 def allReport(request):
-    allReports = Report.objects.all()    
-    SEARCH_text=""
-    if request.method=='POST':
-        SEARCH_text=request.POST.get('searching').strip()
+    allReports = Report.objects.all()
+    SEARCH_text = ""
+    if request.method == "POST":
+        SEARCH_text = request.POST.get("searching").strip()
 
-    allReports=allReports.order_by('-create_date')
+    allReports = allReports.order_by("-create_date")
     if SEARCH_text:
-        allReports=allReports.filter(
-            Q(title__icontains=SEARCH_text)|
-            Q(status__icontains=SEARCH_text)
+        allReports = allReports.filter(
+            Q(title__icontains=SEARCH_text) | Q(status__icontains=SEARCH_text)
         )
 
-    
     return render(
-            request,
-            "allReports.html",
-            {
-                "allReports":allReports,
-                "SEarching_text":SEARCH_text,
-
-            },
-        )
-
-
-
-
-
-
-
+        request,
+        "allReports.html",
+        {
+            "allReports": allReports,
+            "SEarching_text": SEARCH_text,
+        },
+    )
 
 
 def dashboard(request):
-    allReports = Report.objects.all().order_by('-create_date')[:3]
-    totReport=Report.objects.all().count()
+    allReports = Report.objects.all().order_by("-create_date")[:3]
+    totReport = Report.objects.all().count()
     pending = Report.objects.filter(status="pending").count()
     inProgress = Report.objects.filter(status="in_progress").count()
     resolvedd = Report.objects.filter(status="resolved").count()
@@ -82,7 +101,7 @@ def dashboard(request):
         request,
         "dashboard.html",
         {
-            "allReports":allReports,
+            "allReports": allReports,
             "totalReport": totReport,
             "pendingReport": pending,
             "inProgressReport": inProgress,

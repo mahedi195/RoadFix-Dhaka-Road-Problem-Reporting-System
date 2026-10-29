@@ -18,15 +18,15 @@
 
     {% include 'navbar.html' %}
 
-    
+
     {% if messages %}
-        {% for Message_i in messages%}
+    {% for Message_i in messages%}
 
-          <script>
-            alert("  {{Message_i|escapejs}}")
-          </script>
+    <script>
+        alert("  {{Message_i|escapejs}}")
+    </script>
 
-        {% endfor %}
+    {% endfor %}
     {% endif %}
 
 
@@ -167,74 +167,46 @@
 
                         </div>
 
-                        <div class="Photos_and_viewDetails">
+                        <a href="{% url 'edit_report' reports.id %}" class="edittBtn">
+                            Edit
+                        </a>
 
-                            <button class="edittBtn">
-                                <a href="#">
-                                    Edit
-                                </a>
+
+
+                        <form method="POST" action="{% url 'delete_report' reports.id %}"
+                            onsubmit="return confirm('Are you sure want to delete this report?')">
+
+                            {% csrf_token %}
+
+                            <button class="deleteBtn">
+                                Delete
                             </button>
+                        </form>
 
 
-
-                            <form method="POST" action="{% url 'delete_report' reports.id %}"
-                                onsubmit="sessionStorage.setItem('scrollPosition', window.scrollY)">
-
-                                {% csrf_token %}
-
-                                <button type="submit" class="deleteBtn">
-                                    Delete
-                                </button>
-                            </form>
-
-
-                            <button class="view_details_btn">
-                                <a href="{% url 'specific_report_details' reports.id %}">
-                                    View Details
-                                </a>
-                            </button>
-
-                        </div>
-
-
+                       
+                            <a href="{% url 'specific_report_details' reports.id %}" class="view_details_btn">
+                                View Details
+                            </a>
 
                     </div>
 
+
+
                 </div>
 
-                {% endfor %}
             </div>
 
-
-
+            {% endfor %}
         </div>
+
+
+
+    </div>
     </div>
 
     <script>
-        window.addEventListener('load', function () {
-
-            // Restore previous scroll position
-            var scrollPosition = sessionStorage.getItem('scrollPosition');
-
-            if (scrollPosition !== null) {
-                window.scrollTo(0, Number(scrollPosition));
-                sessionStorage.removeItem('scrollPosition');
-            }
-
-            // Hide alert smoothly after 3 seconds
-            setTimeout(function () {
-                var messages = document.querySelectorAll('.alertMessage');
-
-                messages.forEach(function (message) {
-                    message.classList.add('hideAlert');
-
-                    setTimeout(function () {
-                        message.remove();
-                    }, 500);
-                });
-            }, 3000);
-
-        });
+        
     </script>
 
     {% include 'footer.html' %}

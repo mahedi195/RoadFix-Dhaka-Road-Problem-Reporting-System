@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/editReport.css' %}">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <div class="full_form">
+            <h1 class="editForm_text">Edit Form</h1>
+            <div class="block">
+                <label>Title</label>
+                <input type="text" name="titlE" value="{{record_row.title}}">
+            </div>
+
+            <div class="block">
+                <label>Description</label>
+                <textarea name="descriptioN">{{record_row.description}}</textarea>
+            </div>
+
+            <div class="block">
+                <label>Problem Category</label>
+                <select name="categorY">
+
+                    <option value="pothole" {% if record_row.category == 'pothole' %} selected {% endif %}>
+                        Pothole 
+
+
+
+                    </option> 
+
+                    <option value="damaged_road" {% if record_row.category == 'damaged_road' %}selected{% endif %}>
+                        Damaged Road
+                    </option>
+
+                    <option value="waterlogging" {% if record_row.category == 'waterlogging' %}selected{% endif %}>
+                        Waterlogging
+                    </option>
+
+                    <option value="broken_streetlight" {% if record_row.category == 'broken_streetlight' %}selected {% endif %}>
+                        Broken Streetlight
+                    </option>
+
+                    <option value="other" {% if record_row.category == 'other' %}selected {% endif %}>
+                        Other
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="block">
+                <label>Location</label>
+                <input type="text" name="locatioN" value="{{record_row.location}}">
+            </div>
+
+            <div class="block">
+                <label>Road information</label>
+                <textarea name="road_informatioN">{{record_row.road_information}}</textarea>
+            </div>
+
+            <div class="block">
+                <label>Nearby landmarks</label>
+                <input type="text" name="landmarKS" value="{{record_row.landmarks}}">
+            </div>
+
+            <div class="block">
+                <label>Additional details</label>
+                <textarea type="text" name="additional_detaiLS">{{record_row.additional_details}}</textarea>
+            </div>
+
+            <div class="block">
+                <label>Photo</label>
+                {% if record_row.photo %}
+                <img src="{{record_row.photo.url}}" style="width: 200px;">
+
+                {% else %}
+                <p class="no_upload">No photo uploaded</p>
+                {% endif %}
+
+            </div>
+
+            <div class="block">
+                <label>Upload new photo</label>
+                <input type="file" name="uploaded_photo" accept="image/*">
+                <img class="showPhoto" style="width: 200px; display: none; width: 300px;
+                      height: 300px;">
+
+            </div>
+
+            <div>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </form>
+
+    <script src="{% static 'js/uploadPhoto.js' %}"></script>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

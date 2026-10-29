@@ -1,7 +1,13 @@
 
 
-const showPhoto=document.querySelector('.showPhoto')
+
 const inputPhoto=document.querySelector("input[name='uploaded_photo']");
+
+
+const showPhoto=document.querySelector('.showPhoto')
+
+
+
 inputPhoto.addEventListener('change',function()
 {
     const image=inputPhoto.files[0];
