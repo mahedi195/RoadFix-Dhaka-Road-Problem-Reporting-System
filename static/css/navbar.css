@@ -40,6 +40,8 @@ nav .othersOption {
 nav .register_login {
     display: flex;
     align-items: center;
+    margin-bottom: 7px;
+
 }
 
 nav a {

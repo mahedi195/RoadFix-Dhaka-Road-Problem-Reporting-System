@@ -18,9 +18,10 @@ class Report(models.Model):
     ]
 
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True)
     category = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
-    #area = models.CharField(max_length=200)
+
+    description = models.TextField()
+    # area = models.CharField(max_length=200)
 
     photo = models.ImageField(upload_to="reportPics/", blank=True, null=True)
 
@@ -28,10 +29,10 @@ class Report(models.Model):
     create_date = models.DateTimeField(auto_now_add=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
-    location=models.CharField(max_length=200)
-    road_information=models.CharField(max_length=200)
-    landmarks=models.CharField(max_length=300,blank=True)
-    additional_details=models.CharField(max_length=500,blank=True)
+    location = models.CharField(max_length=200)
+    road_information = models.CharField(max_length=200)
+    landmarks = models.CharField(max_length=300)
+    additional_details = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.title
