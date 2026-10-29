@@ -167,27 +167,30 @@
 
                         </div>
 
-                        <a href="{% url 'edit_report' reports.id %}" class="edittBtn">
-                            Edit
-                        </a>
+
+                        <div class="edit_delete_viewDetils_button">
+                            <a href="{% url 'edit_report' reports.id %}" class="edittBtn">
+                                Edit
+                            </a>
 
 
 
-                        <form method="POST" action="{% url 'delete_report' reports.id %}"
-                            onsubmit="return confirm('Are you sure want to delete this report?')">
+                            <form method="POST" action="{% url 'delete_report' reports.id %}"
+                                onsubmit="return confirm('Are you sure want to delete this report?')">
 
-                            {% csrf_token %}
+                                {% csrf_token %}
 
-                            <button class="deleteBtn">
-                                Delete
-                            </button>
-                        </form>
+                                <button class="deleteBtn" >
+                                    Delete
+                                </button>
+                            </form>
 
 
-                       
+
                             <a href="{% url 'specific_report_details' reports.id %}" class="view_details_btn">
                                 View Details
                             </a>
+                        </div>
 
                     </div>
 
@@ -206,7 +209,7 @@
     </div>
 
     <script>
-        
+
     </script>
 
     {% include 'footer.html' %}

@@ -58,10 +58,18 @@
 
  .edit_and_password button a {
      text-decoration: none;
+     color: white;
  }
 
+.edit_and_password .editBtn:hover{
+    background-color: white;
+    border: 1px solid #1F4E78;
 
+}
 
+.edit_and_password .editBtn:hover a{
+    color: #1F4E78;
+}
  .personalInformationText p {
      margin-bottom: 5px;
      margin-top: 20px;
@@ -325,72 +333,67 @@
      color: #3730a3;
  }
 
- button a {
+
+ a {
      text-decoration: none;
-     font-size: 15px;
  }
 
- button {
-     padding: 6px 20px;
-     border-radius: 5px;
-     border: none;
+ .edit_delete_viewDetils_button {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
 
+ .edit_delete_viewDetils_button a {
+     padding: 5px 22px;
  }
 
  .edittBtn {
+     color: white;
+     background-color: #1F4E78;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+         padding: 5px 22px;
+         cursor: pointer;
+ }
+
+ .edittBtn:hover {
+     color: #1F4E78;
      background-color: white;
      border: 1px solid #1F4E78;
  }
 
- .deleteBtn {
+
+  .deleteBtn {
      color: white;
      background-color: red;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+         padding: 5px 22px;
+                  cursor: pointer;
+
  }
 
- .view_details_btn {
+ .deleteBtn:hover {
+     color: red;
+     background-color: rgb(248, 217, 217);
+ }
+
+
+  .view_details_btn {
+     color: white;
      background-color: #1F4E78;
-     color: white;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+         padding: 5px 22px;
+         cursor: pointer;
  }
 
- .edittBtn a {
+ .view_details_btn:hover {
      color: #1F4E78;
-
- }
-
- .deleteBtn a {
-     color: white;
-
- }
-
- .view_details_btn a {
-     color: white;
-
- }
-
- .editBtn a {
-     color: white;
-
- }
-
- .editBtn {
      background-color: white;
+     border: 1px solid #1F4E78;
  }
-
- .Photos_and_viewDetails {
-     display: grid;
-     grid-template-columns: repeat(3, minmax(0, 1fr));
-     gap: 20px;
- }
-
- button {
-     cursor: pointer;
-     transition: transform 0.3s ease;
- }
-
- button:hover {
-     transform: scale(1.02);
- }
-
-
-
-
