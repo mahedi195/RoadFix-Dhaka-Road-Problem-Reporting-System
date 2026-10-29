@@ -144,6 +144,7 @@ def report_create(request):
             additional_details=additional_details,
         )
 
+        messages.success(request,'Report created successfully!')
         return redirect("index")
 
 
