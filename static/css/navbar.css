@@ -238,11 +238,11 @@
 
  .hidden_when_mobile_Active {
      gap: 25px;
-     font-size: 22px;
+     font-size: 20px;
  }
 
  nav .othersOption {
-     gap: 20px;
+     gap: 30px;
  }
 
 
@@ -268,7 +268,7 @@
      }
 
      .hidden_when_mobile_Active {
-         gap: 10px;
+         gap: 25px;
      }
 
      .logo_and_roadFix h1 {
@@ -276,11 +276,11 @@
      }
 
      .hidden_when_mobile_Active {
-         font-size: 20px;
+         font-size: 18px;
      }
 
      nav .othersOption {
-         gap: 10px;
+         gap: 30px;
      }
      .profile{
         position: relative;
