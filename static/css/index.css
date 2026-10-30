@@ -216,12 +216,6 @@ body {
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
 
 
 
@@ -248,7 +242,6 @@ body {
     margin: 0;
 }
 
-.reportSection .box .text {}
 
 .reportSection .box .text .firstline {
     font-weight: bold;
@@ -271,10 +264,6 @@ body {
 .all_cart {
     margin: 40px 30px 40px 60px;
 }
-
-
-
-
 
 
 

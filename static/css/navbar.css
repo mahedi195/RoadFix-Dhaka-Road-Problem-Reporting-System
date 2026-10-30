@@ -1,345 +1,413 @@
  body {
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    font-family: Arial, sans-serif;
-
-}
-*{
-    box-sizing: border-box;
-}
-
-nav {
-    position: relative;
-    /* padding: 10px 20px; */
-}
-
-.logo_and_roadFix img {
-    width: 30px;
-
-}
-
-.logo_and_roadFix h1 {
-    margin: 0;
-    color: white;
-    margin-left: 60px;
-}
-
-
-.logo_and_roadFix {
-    display: flex;
-}
-
-nav .othersOption {
-    display: flex;
-    align-items: center;
-    /* gap: 50px;*/
-
-}
-
-nav .register_login {
-    display: flex;
-    align-items: center;
-    margin-bottom: 7px;
-
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 0;
-    /* padding: 6px 20px; */
-    background-color: #1F4E78;
-}
+     margin: 0;
+     padding: 0;
+     background-color: #f1f1f1;
+     font-family: Arial, sans-serif;
+
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ nav {
+     position: relative;
+     /* padding: 10px 20px; */
+ }
+
+ .logo_and_roadFix img {
+     width: 30px;
+
+ }
+
+ .logo_and_roadFix h1 {
+     margin: 0;
+     color: white;
+ }
+
+
+ .logo_and_roadFix {
+     display: flex;
+     outline: 0;
+     border: 0;
+     margin-left: 15px;
+ }
+
+ nav .othersOption {
+     display: flex;
+     align-items: center;
+     /* gap: 50px;*/
+
+ }
+
+ nav .register_login {
+     display: flex;
+     align-items: center;
+
+ }
+
+ nav a {
+     text-decoration: none;
+     color: white;
+ }
+
+ nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 30px;
+     margin: 0;
+     /* padding: 6px 20px; */
+     background-color: #1F4E78;
+ }
 
-.register_loginPage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
+ .register_loginPage {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+ }
 
-.othersOption a {
-    position: relative;
-}
+ .othersOption a {
+     position: relative;
+ }
 
-.othersOption a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    left: 0;
-    bottom: 0px;
-    transition: width 0.3s ease;
+ .othersOption a::after {
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 2px;
+     background-color: white;
+     left: 0;
+     bottom: 0px;
+     transition: width 0.3s ease;
 
-}
+ }
 
-.othersOption a:hover::after {
-    width: 100%;
-}
+ .othersOption a:hover::after {
+     width: 100%;
+ }
 
-.image_and_name img {
-    width: 20px;
-    background: transparent;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 6px;
-}
+ .image_and_name img {
+     width: 28px;
+     background: transparent;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-right: 5px;
+ }
 
-.image_and_name {
-    display: flex;
-    align-items: center;
+ .image_and_name {
+     display: flex;
+     align-items: center;
 
-    margin-right: 40px;
-}
+     margin-right: 40px;
+ }
 
 
-.profile .username {
-    font-size: 20px;
-    color: white;
-}
+ .profile .username {
+     color: white;
+     max-width: 90px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
 
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    background-color: #1F4E78;
+ nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 30px;
+     background-color: #1F4E78;
+     padding: 10px 0px 10px 10px;
 
-    padding: 10px 0px 2px 0px;
-}
+ }
 
 
-.profile {
-    position: relative;
-    cursor: pointer;
-}
+ .profile {
+     position: relative;
+     cursor: pointer;
+ }
 
-.profile ul {
-    position: absolute;
-    /* display: none; */
-    width: 100%;
-    list-style: none;
-    top: 100%;
-    left: 0;
-    padding: 0px 0px;
-    background-color: white;
-    z-index: 100;
 
+ .profile ul {
+     /*  position: absolute;
 
+     width: 100%;
+     list-style: none;
+     top: 60%;
+     left: 0;
+     padding: 0px 0px;
+     background-color: white;
+     z-index: 100;
 
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    /* Starts slightly shifted up */
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 
 
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-10px);
+     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 
-}
 
-.profile:hover ul {
-    /*   display: block;*/
+*/
+ }
 
 
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
 
-}
 
-.profile ul li {
-    color: #1F4E78;
-    margin: 0;
-}
 
 
+ .profile ul {
+     position: absolute;
+     width: 100%;
+     min-width: 150px;
+     top: 150%;
+     left: 0;
 
-.profile ul li a {
-    display: block;
-    padding: 3px 15px;
-    color: #1F4E78;
-    text-decoration: none;
+     list-style: none;
+     padding: 0;
+     margin: 0;
 
+     background-color: white;
+     z-index: 100;
 
-}
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-10px);
 
-.profile ul li a:hover {
-    color: #f0f0f0;
-    background-color: #1F4E78;
+     transition: opacity 0.3s ease,
+         visibility 0.3s ease,
+         transform 0.3s ease;
+ }
 
-}
 
-.profile li {
-    width: 100%;
-    border-bottom: 1px solid gray;
+ .profile:hover ul {
+     /*   display: block;*/
 
-    width: 100%;
-}
 
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0);
 
-.menuIcon img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    display: none;
-}
+ }
 
+ .profile ul li {
+     color: #1F4E78;
+     margin: 0;
+ }
 
 
-.hidden_when_mobile_Active {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    /* gap: 60px*/
-}
 
-.hidden_when_mobile_Active {
-    gap: 25px;
-}
+ .profile ul li a {
+     display: block;
+     padding: 3px 15px;
+     color: #1F4E78;
+     text-decoration: none;
 
-nav .othersOption {
-    gap: 20px;
-}
 
+ }
 
+ .profile ul li a:hover {
+     color: #f0f0f0;
+     background-color: #1F4E78;
 
+ }
 
+ .profile li {
+     width: 100%;
+     border-bottom: 1px solid gray;
 
+     width: 100%;
+ }
 
 
+ .menuIcon img {
+     width: 30px;
+     height: 30px;
+     cursor: pointer;
+     display: none;
+ }
 
 
 
-@media screen and (max-width: 850px) {
+ .hidden_when_mobile_Active {
+     display: flex;
+     align-items: center;
+     /* justify-content: center; */
+     /* gap: 60px*/
+ }
 
-    .hidden_when_mobile_Active {
-        display: none;
-    }
+ .hidden_when_mobile_Active {
+     gap: 25px;
+     font-size: 22px;
+ }
 
-    .menuIcon img {
-        display: block;
-    }
+ nav .othersOption {
+     gap: 20px;
+ }
 
-    .hidden_when_mobile_Active.showMenu {
-        display: block;
-    }
 
 
-    nav {
-        position: relative;
-    }
 
-    .hidden_when_mobile_Active {
-        position: absolute;
-        top: 100%;
-        background-color: rgb(173, 171, 171);
 
-        width: 100%;
 
 
 
-    }
 
 
-    .othersOption {
-        display: flex;
-        flex-direction: column;
+ @media screen and (max-width: 800px) {
+     .logo_and_roadFix {
+         margin-left: 10px;
+     }
 
-    }
+     .image_and_name {
+         margin-right: 20px;
+     }
 
-    .othersOption a {
-        width: 100%;
-    }
+     nav {
+         gap: 10px;
+     }
 
-    nav .othersOption {
-        gap: 0px;
-    }
-
-
-
-    .othersOption a {
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-
-
-
-    .register_login {
-        width: 100vw;
-    }
-
-    .register_login ul {
-        margin-top: 0px;
-    }
-
-    .profile {
-        width: 100vw;
-    }
-
-    .image_and_name {
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-
-    .profile li {
-        margin-top: 10px;
-
-    }
-
-
-    .logo_and_roadFix h1 {
-
-        margin-left: 20px;
-    }
-
-
-    nav a {
-
-        font-size: 18px;
-    }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:480px) {
-    .logo_and_roadFix h1 {
-        margin: 0;
-        color: white;
-        margin-left: 0px;
-    }
-
-
-    nav a {
-
-        font-size: 14px;
-    }
+     .hidden_when_mobile_Active {
+         gap: 10px;
+     }
 
      .logo_and_roadFix h1 {
+         font-size: 25px;
+     }
 
-        margin-left: 20px;
-    }
+     .hidden_when_mobile_Active {
+         font-size: 20px;
+     }
+
+     nav .othersOption {
+         gap: 10px;
+     }
+     .profile{
+        position: relative;
+     }
+
+     .profile ul{
+        position: absolute;
+        top: 138%;
+        left: 0px;
+     }
+
+ }
 
 
 
-}
+
+
+
+
+
+ @media screen and (max-width:660px) {
+
+     .hidden_when_mobile_Active {
+         display: none;
+
+     }
+
+     .menuIcon img {
+         display: block;
+     }
+
+     .hidden_when_mobile_Active.showMenu {
+         display: flex;
+         flex-direction: column;
+     }
+
+     nav {
+         position: relative;
+     }
+
+     nav .othersOption {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .hidden_when_mobile_Active.showMenu {
+         position: absolute;
+         top: 100%;
+         left: 0px;
+         background-color: white;
+         width: 100%;
+         display: flex;
+         align-items: flex-start;
+     }
+
+     .othersOption a {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         color: #1F4E78;
+     }
+
+
+     nav .register_login {
+         color: #1F4E78;
+     }
+
+     .profile .username {
+         color: #1F4E78;
+
+     }
+
+     nav .othersOption {
+         width: 100%
+     }
+
+     .othersOption a {
+         width: 100%;
+     }
+
+     .othersOption a {
+         width: 100%;
+         border-bottom: 1px solid #b3b1b1;
+         padding: 5px;
+     }
+
+     .profile .username {
+         padding: 5px;
+     }
+
+     nav .register_login {
+         color: #1F4E78;
+         width: 100%;
+         border-bottom: 1px solid gray;
+     }
+
+
+     nav .register_login {
+         border-bottom: 1px solid rgb(168, 168, 168);
+         position: relative;
+     }
+
+
+     .profile ul {
+         position: absolute;
+         top: 100%;
+         background: #efeded;
+
+     }
+
+
+     .profile {
+         width: 100%;
+     }
+
+     .profile ul li a {
+         padding: 5px;
+     }
+
+     .image_and_name img {
+         margin-left: 5px;
+     }
+
+     .image_and_name {
+         margin-right: 0px;
+     }
+
+
+ }

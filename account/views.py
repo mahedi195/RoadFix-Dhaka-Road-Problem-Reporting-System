@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 from reports.models import Report as reportAppReportClassModel
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
 
 
 def update_password(request):
@@ -26,9 +28,7 @@ def update_password(request):
             return render(
                 request,
                 "updatePassword.html",
-                {
-                    "password_length_error": "New password is empty."
-                },
+                {"password_length_error": "New password is empty."},
             )
 
         if len(new_pass) < 5:
@@ -49,6 +49,8 @@ def update_password(request):
 
         user.set_password(new_pass)
         user.save()
+        update_session_auth_hash(request, user)
+        messages.success(request, "Password updated successfully!")
         return render(request, "userProfile.html")
 
 
@@ -80,24 +82,30 @@ def editProfile(request):
         user.email = eMail
 
         user.save()
+        messages.success(request, "Profile updated successfully!")
 
         return redirect("myProfilePage")
 
 
 def userProfile(request):
-    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by("-create_date")
-    totalReports=myReports.count()
-    pending=myReports.filter(status='pending').count()
-    inProgress=myReports.filter(status='in_progress').count()
-    resolveD=myReports.filter(status='ressolved').count()
-    return render(request, "userProfile.html", 
-                  {
-                      "myAllReports": myReports,
-                      'totalReports': totalReports,
-                      'pending': pending,
-                      'inProgress':inProgress,
-                      'resolved':resolveD,
-                  })
+    myReports = reportAppReportClassModel.objects.filter(user=request.user).order_by(
+        "-create_date"
+    )
+    totalReports = myReports.count()
+    pending = myReports.filter(status="pending").count()
+    inProgress = myReports.filter(status="in_progress").count()
+    resolveD = myReports.filter(status="ressolved").count()
+    return render(
+        request,
+        "userProfile.html",
+        {
+            "myAllReports": myReports,
+            "totalReports": totalReports,
+            "pending": pending,
+            "inProgress": inProgress,
+            "resolved": resolveD,
+        },
+    )
 
 
 def logout_user(request):

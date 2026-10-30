@@ -13,6 +13,14 @@
 <body>
     {% include 'navbar.html' %}
 
+    {% if messages %}
+    {% for m1 in messages %}
+    <script>
+        alert(" {{m1}} ")
+    </script>
+    {% endfor %}
+    {% endif %}
+
     <form method="POST" enctype="multipart/form-data">
 
         {% csrf_token %}
@@ -32,26 +40,27 @@
                 <label>Problem Category</label>
                 <select name="categorY">
 
-                    <option value="pothole" {% if record_row.category == 'pothole' %} selected {% endif %}>
-                        Pothole 
+                    <option value="pothole" {% if record_row.category=='pothole' %} selected {% endif %}>
+                        Pothole
 
 
 
-                    </option> 
+                    </option>
 
-                    <option value="damaged_road" {% if record_row.category == 'damaged_road' %}selected{% endif %}>
+                    <option value="damaged_road" {% if record_row.category=='damaged_road' %}selected{% endif %}>
                         Damaged Road
                     </option>
 
-                    <option value="waterlogging" {% if record_row.category == 'waterlogging' %}selected{% endif %}>
+                    <option value="waterlogging" {% if record_row.category=='waterlogging' %}selected{% endif %}>
                         Waterlogging
                     </option>
 
-                    <option value="broken_streetlight" {% if record_row.category == 'broken_streetlight' %}selected {% endif %}>
+                    <option value="broken_streetlight" {% if record_row.category=='broken_streetlight' %}selected {%
+                        endif %}>
                         Broken Streetlight
                     </option>
 
-                    <option value="other" {% if record_row.category == 'other' %}selected {% endif %}>
+                    <option value="other" {% if record_row.category=='other' %}selected {% endif %}>
                         Other
                     </option>
 

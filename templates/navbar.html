@@ -1,85 +1,66 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 
 
+<nav>
+    <div class="logo_and_roadFix">
 
-    <style>
+        <!-- <h1>RoadFix</h1>
+        -->
+        <a href="{% url 'index' %}">
+            <h1>RoadFix</h1>
+        </a>
+    </div>
 
-    </style>
-</head>
 
-<body>
+    <div class="menuIcon">
+        <img src="{% static 'images/nav_icon3.png' %}">
+    </div>
 
 
+    <div class="hidden_when_mobile_Active">
 
-    <nav>
-        <div class="logo_and_roadFix">
 
-           <!-- <h1>RoadFix</h1>
-        --> 
-           <a href="{% url 'index' %}"><h1>RoadFix</h1></a>
+        <div class="othersOption">
+            <a href="{% url 'Dashboard' %}">Dashboard</a>
+            <a href="{% url 'allReports' %}">All Reports</a>
+            <a href="{% url 'report_form' %}">Report Problem</a>
         </div>
 
 
-        <div class="menuIcon">
-            <img src="{% static 'images/nav_icon3.png' %}">
-        </div>
+
+        <div class="register_login">
+            {% if user.is_authenticated %}
+
+            <div class="profile">
+                <div class="image_and_name">
+                    <img src="{% static 'images/profile.jpg' %}">
+                    <span class="username">{{user.username}}</span>
+                </div>
+
+                <ul>
+                    <li><a href="{% url 'myProfilePage' %}">My Profile</a></li>
+                    <li><a href="{% url 'logoutOption' %}">Logout</a></li>
+                </ul>
 
 
-        <div class="hidden_when_mobile_Active">
-
-
-            <div class="othersOption">
-                <a href="{% url 'Dashboard' %}">Dashboard</a>
-                <a href="{% url 'allReports' %}">All Reports</a>
-                <a href="{% url 'report_form' %}">Report Problem</a>
             </div>
+            {% else %}
+            <div class="register_loginPage">
 
-
-
-            <div class="register_login">
-                {% if user.is_authenticated %}
-
-                <div class="profile">
-                    <div class="image_and_name">
-                        <img src="{% static 'images/location.png' %}">
-                        <span class="username">{{user.username}}</span>
-                    </div>
-
-                    <ul>
-                        <li><a href="{% url 'myProfilePage' %}">My Profile</a></li>
-                        <li><a href="{% url 'logoutOption' %}">Logout</a></li>
-                    </ul>
-
-
-                </div>
-                {% else %}
-                <div class="register_loginPage">
-
-                    <a href="{% url 'register' %}">Register</a>
-                    <a href="{% url 'loginPage' %}">Login</a>
-
-                </div>
-
-                {% endif %}
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'loginPage' %}">Login</a>
 
             </div>
 
+            {% endif %}
+
         </div>
-    </nav>
+
+    </div>
+</nav>
 
 
-    <script src="{% static 'js/navbar.js' %}"></script>
+<script src="{% static 'js/navbar.js' %}"></script>
 
-
-
-</body>
-
-</html>
