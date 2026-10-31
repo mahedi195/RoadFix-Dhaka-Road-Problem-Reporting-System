@@ -22,7 +22,7 @@
 <body>
     {% include 'navbar.html' %}
 
-        {% if messages %}
+    {% if messages %}
     {% for m1 in messages %}
     <script>
         alert(" {{m1}} ")
@@ -30,12 +30,13 @@
     {% endfor %}
     {% endif %}
 
+
+
     
-
-    <div class="full_form">
-        <h1 class="editFormTEXT">Edit Profile</h1>
+        
         <form method="POST">
-
+            <div class="full_form">
+            <h1 class="editFormTEXT">Edit Profile</h1>
             {% csrf_token %}
 
             <div class="group">
@@ -68,6 +69,7 @@
 
             <div class="group">
                 <button class="submit">Submit</button>
+            </div>
             </div>
         </form>
 

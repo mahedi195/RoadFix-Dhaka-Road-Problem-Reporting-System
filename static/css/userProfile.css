@@ -61,15 +61,16 @@
      color: white;
  }
 
-.edit_and_password .editBtn:hover{
-    background-color: white;
-    border: 1px solid #1F4E78;
+ .edit_and_password .editBtn:hover {
+     background-color: white;
+     border: 1px solid #1F4E78;
 
-}
+ }
 
-.edit_and_password .editBtn:hover a{
-    color: #1F4E78;
-}
+ .edit_and_password .editBtn:hover a {
+     color: #1F4E78;
+ }
+
  .personalInformationText p {
      margin-bottom: 5px;
      margin-top: 20px;
@@ -102,6 +103,7 @@
      height: 20px;
      object-fit: contain;
      margin-bottom: 0px;
+     margin-right: 5px;
  }
 
  .issue_status {
@@ -185,23 +187,23 @@
  }
 
  .total {
-    color: white;
-    background-color: #4abcef;
+     color: white;
+     background-color: #4abcef;
  }
 
  .pending {
-    color: rgb(180, 106, 9);
-    background-color: rgb(239 214 180);
+     color: rgb(180, 106, 9);
+     background-color: rgb(239 214 180);
  }
 
  .in_progress {
-    background-color: #c6d2fb;
-    color: #3730a3;
+     background-color: #c6d2fb;
+     color: #3730a3;
  }
 
  .resolved {
-    color: #166534;
-    background-color: #bdefce;
+     color: #166534;
+     background-color: #bdefce;
  }
 
  .value_and_status p {
@@ -354,8 +356,8 @@
      border: none;
      border-radius: 5px;
      font-size: 16px;
-         padding: 5px 22px;
-         cursor: pointer;
+     padding: 5px 22px;
+     cursor: pointer;
  }
 
  .edittBtn:hover {
@@ -365,14 +367,14 @@
  }
 
 
-  .deleteBtn {
+ .deleteBtn {
      color: white;
      background-color: red;
      border: none;
      border-radius: 5px;
      font-size: 16px;
-         padding: 5px 22px;
-                  cursor: pointer;
+     padding: 5px 22px;
+     cursor: pointer;
 
  }
 
@@ -382,19 +384,92 @@
  }
 
 
-  .view_details_btn {
+ .view_details_btn {
      color: white;
      background-color: #1F4E78;
      border: none;
      border-radius: 5px;
      font-size: 16px;
-         padding: 5px 22px;
-         cursor: pointer;
+     padding: 5px 22px;
+     cursor: pointer;
  }
 
  .view_details_btn:hover {
      color: #1F4E78;
      background-color: white;
-          border: 1px solid #1F4E78;
+     border: 1px solid #1F4E78;
 
+ }
+
+
+ @media screen and (max-width:800px) {
+     .personalInfo_and_cart {
+         padding: 15px;
+         width: 100%;
+     }
+
+
+     .block .val {
+         flex-wrap: nowrap;
+     }
+ }
+
+
+
+ @media screen and (max-width:468px) {
+     .edit_and_password {
+         display: flex;
+         flex-direction: column;
+         /* width: 100%; */
+         align-items: flex-start;
+         gap: 10px;
+     }
+
+ }
+
+ @media screen and (max-width:490px) {
+     .reportBox {
+         display: grid;
+         align-items: center;
+         grid-template-columns: repeat(3, 1fr);
+
+     }
+ }
+
+
+
+ @media screen and (max-width:375px) {
+     .reportBox {
+         display: grid;
+         align-items: center;
+         grid-template-columns: repeat(2, 1fr);
+
+     }
+ }
+
+
+ @media screen and (max-width:270px) {
+     .reportBox {
+         display: grid;
+         align-items: center;
+         grid-template-columns: repeat(1, 1fr);
+
+     }
+ }
+
+
+ @media screen and (max-width:390px) {
+     .issue_status {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+
+     }
+
+     .edit_delete_viewDetils_button {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 8px;
+     }
  }

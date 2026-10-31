@@ -109,3 +109,33 @@ input::placeholder,
 textarea::placeholder {
     color: #999999;
 }
+
+
+@media screen and (max-width:800px) {
+    .full_form{
+        margin: 15px auto;
+    }
+
+    .report_a_prb_text{
+        font-size: 20px;
+            margin:20PX 20PX;
+    }
+  input,select,textarea,.submit,.back_home{
+        font-size: 16px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .full_form{
+        margin: 15px auto;
+        width: 90%;
+        padding: 10px;
+    }
+    select{
+        width: 90%;
+    }
+}
