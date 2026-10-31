@@ -6,7 +6,7 @@
               align-items: center;
               /* margin: 0; */
               padding: 10px 10px;
-              font-size: 20px;
+              font-size: 16px;
           }
 
           footer h3 {
@@ -20,13 +20,13 @@
 
           .DevelopName {
               color: white;
-              font-size: 20px;
+              font-size: 16px;
 
           }
 
           .developer {
               color: white;
-              font-size: 20px;
+              font-size: 16px;
               text-decoration: underline;
 
           }
@@ -35,18 +35,13 @@
           @media screen and (max-width:850px) {
 
               footer {
-                  display: grid;
-                  grid-template-columns: repeat(1, minmax(0, 1fr));
-                  gap: 10px;
-                  justify-content: center;
-
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
               }
 
               footer h3,
-              footer p{
-                text-align: center;
-
-              }
+              footer p {}
 
 
 
@@ -54,13 +49,15 @@
           }
 
 
-          
-          @media screen and (max-width:480px) {
+
+          @media screen and (max-width:380px) {
 
               footer {
                   display: grid;
-                  grid-template-columns: repeat(1, minmax(0, 1fr));
-                  gap: 10px;
+                  grid-template-columns: 1fr;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
 
               }
 
@@ -68,4 +65,3 @@
 
 
           }
-
