@@ -320,6 +320,7 @@
 
  .personalInfo_and_cart {
      padding: 40px 60px;
+     background-color: white;
  }
 
  .rep_status {
@@ -404,15 +405,17 @@
 
  @media screen and (max-width:800px) {
      .personalInfo_and_cart {
-         padding: 15px;
-         width: 100%;
+         margin: 15px;
      }
 
 
-     .block .val {
-         flex-wrap: nowrap;
+
+
+     .personalInfo_and_cart {
+         padding: 15px;
      }
  }
+
 
 
 
@@ -473,3 +476,18 @@
          gap: 8px;
      }
  }
+
+   @media screen and (max-width:435px) {
+    .issue_status{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edit_delete_viewDetils_button{
+                display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+  }
