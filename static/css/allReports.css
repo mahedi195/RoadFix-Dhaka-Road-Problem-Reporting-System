@@ -273,7 +273,7 @@ body {
         align-items: flex-start;
     }
     .location{
-        margin: 5px 0px;
+        margin: 6px 0px;
     }
     .viewDetails{
         margin-top: 5px;
@@ -296,4 +296,6 @@ body {
     .search_titile_status button{
         width: 100%;
     }
+
+
 }
