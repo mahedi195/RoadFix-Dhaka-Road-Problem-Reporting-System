@@ -59,15 +59,15 @@
                 <!-- <p>{{reportX.id}}</p>
                -->
                 <div class="title_status">
-                    <h3 class="title" style="font-size: 22px;"> {{reportX.title}}</h3>
-                    <p class="{{reportX.status}}" style="font-size: 19px;">{{reportX.get_status_display}}</p>
+                    <h3 class="title"> {{reportX.title}}</h3>
+                    <p class="{{reportX.status}}">{{reportX.get_status_display}}</p>
                 </div>
-                <div class="location" style="color:  #6B7280; font-size: 19px;">
+                <div class="location">
                     <img src="{% static 'images/location.png' %} " alt="location pic" style="width: 20px;">
                     {{reportX.location}}
                 </div>
                 <div class="date_viewMore">
-                    <p class="" style="color:  #6B7280; font-size: 19px;"> {{reportX.create_date|date:'d M Y'}}</p>
+                    <p class="date"> {{reportX.create_date|date:'d M Y'}}</p>
                     <a href="{% url 'specific_report_details' reportX.id %}" class="viewDetails">
                         View Details
                     </a>
