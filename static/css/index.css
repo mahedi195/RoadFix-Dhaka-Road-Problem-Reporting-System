@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: #e7e6e6;;
     font-family: Arial, sans-serif;
 
 }
@@ -15,7 +15,7 @@ body {
 .cart {
     /* font-size: 23px; */
     /* border: 1px solid #dfdcdc; */
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 1px 5px 10px #cfcece;
@@ -28,16 +28,18 @@ body {
 
 
 .issue_status {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: space-between;
     color: #5b5b5b;
     font-size: 19px;
     margin-bottom: 5px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .issue_status p {
     margin: 0px;
+    font-size: 16px;
 }
 
 .status-pending {
@@ -45,6 +47,8 @@ body {
     background-color: rgb(243, 224, 199);
     padding: 5px 10px;
     border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
 
 }
 
@@ -88,6 +92,7 @@ body {
     margin: 0px;
     display: flex;
     align-items: center;
+    font-size: 16px;
 }
 
 .prb_category {
@@ -99,6 +104,8 @@ body {
     display: inline;
     margin-bottom: 10px;
     /* margin-bottom: 20px !important;*/
+    display: inline-block;
+    width: fit-content;
 }
 
 .title_category_description .prb_name {
@@ -106,7 +113,7 @@ body {
     margin-bottom: 0px;
     /* margin-top: 8px; */
     margin-top: 7px;
-    font-size: 22px;
+    font-size: 19px;
 
 }
 
@@ -115,7 +122,7 @@ body {
     /* margin-top: 10px; */
     margin-bottom: 0px;
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .recent_road_problems_text {
@@ -156,6 +163,7 @@ body {
 .view_details a {
     color: black;
     text-decoration: none;
+    font-size: 16px;
 }
 
 
@@ -212,6 +220,7 @@ body {
 .main_section h2 {
     margin: 0;
     color: #1F4E78;
+    font-size: 20px;
 }
 
 
@@ -246,11 +255,13 @@ body {
 .reportSection .box .text .firstline {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: 16px;
 
 }
 
 .reportSection .box .text .secondline {
     color: rgb(129 129 129);
+    font-size: 16px;
 }
 
 .reportSection .ReporSectionheadline {
@@ -312,7 +323,6 @@ header .firstLine {
 header .second_line {
     font-size: 25px;
     color: #1F4E78;
-    margin: 13px 0px;
 }
 
 
@@ -359,93 +369,72 @@ header .btn a:hover {
     object-fit: cover;
 }
 
+.category_status {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+}
 
 
 
 
 
 /* responsive - tablet size*/
-@media screen and (max-width:850px) {
+@media screen and (max-width:800px) {
+
     .coverPhoto {
         width: 100%;
-        height: 400px;
-        object-fit: cover;
+        object-fit: fill;
+        height: 360px;
     }
 
-
     header .lines {
-        margin: 40px 20px;
+        margin: 20px 20px;
+    }
+
+    header .second_line {
+        font-size: 28px;
     }
 
     header .btn {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-
-    .main_section {
-        margin: 60px 20px;
-    }
-
-    .reportSection {
-        margin: 0;
-    }
-
-    .reportSection .ReporSectionheadline {
-
-        margin-left: 0;
-    }
-
-
-    .reportSection .status {
-        /* display: grid; */
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        /*   gap: 20px; */
-        margin-left: 0;
-    }
-
-    .all_cart {
-        margin: 0;
-    }
-
-    .main_section h2 {
-        margin-top: 25px;
-        color: #1F4E78;
-    }
-
-
-
-    .issue_status {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-
-    .issue_status p {
-        margin: 0px;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .Photos_and_viewDetails {
-        margin: 20px;
-    }
-
-
-    .photoViewsDetails {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .view_details {
         margin-top: 20px;
     }
 
+    .main_section {
+        margin: 0;
+        margin-top: 30px;
+    }
 
+    .reportSection {
+        margin: 0 20px;
+    }
 
+    .reportSection .ReporSectionheadline {
+        margin-left: 0px;
+    }
 
+    .reportSection .ReporSectionheadline {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #1F4E78;
+    }
+
+    .reportSection .status {
+        margin-left: 0px;
+    }
+
+    .all_cart {
+        /* margin: 40px 30px 40px 60px; */
+        margin: 20px 20px;
+    }
+
+    .cart {
+        padding: 15px 15px;
+    }
 
 
 }
@@ -453,47 +442,97 @@ header .btn a:hover {
 
 
 
-
-
-/* responsive- mobile size<=480px */
-@media screen and (max-width:480px) {
-
-    .coverPhoto {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-
-
-
-    .reportSection .ReporSectionheadline {
-        font-size: 25px;
-        margin-left: 2px;
-    }
-
+/*road issue waiting fixed issue*/
+@media screen and (max-width:550px) {
 
     .reportSection .status {
-        /* display: grid; */
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        /* gap: 20px; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
+
+}
+
+/*road issue waiting fixed issue*/
+
+@media screen and (max-width:368px) {
+
+    .reportSection .status {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/*category and status */
+
+@media screen and (max-width:575px) {
 
     .issue_status {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .category_status {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width:335px) {
+
+    .category_status {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+/*category and status */
+@media screen and (max-width:762px) {
+
+    .issue_status {
+
+        color: #5b5b5b;
+        font-size: 19px;
+        margin-bottom: 5px;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .category_status {
         display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: center;
+    }
+}
 
+
+/*category and status */
+@media screen and (max-width:419px) {
+    .category_status {
+      /* grid-template-columns: 1fr;
+       gap: 5px;
+       */
+       display: flex;
+       justify-content: space-between;
+        
     }
 
-    .view_details {
-        margin-top: 20px;
+}
+
+/*category and status */
+@media screen and (max-width:360px) {
+    .category_status {
+        display: grid;
+       grid-template-columns: 1fr;
+       gap: 5px;
+       width: 200px;
+       
+       
+        
     }
-
-
-
-
-
-
-
 
 }

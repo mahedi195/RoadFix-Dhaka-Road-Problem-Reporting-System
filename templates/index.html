@@ -13,14 +13,14 @@
 
 <body>
 
-    {% include 'navbar.html'  %}
+    {% include 'navbar.html' %}
 
     {% if messages %}
 
     {% for x in messages %}
-      <script>
+    <script>
         alert('{{x}}')
-      </script>
+    </script>
     {% endfor %}
     {% endif %}
 
@@ -95,11 +95,14 @@
                     <div class="issue_status">
                         <!--<p class="issue">Issue # {{reports.create_date|date:'Ymd'}}-{{reports.id|stringformat:'04d'}}</p>
                 -->
-                        <p class="issue">Report : {{reports.id|stringformat:'06d'}}</p>
+                        <p class="issue issue_date">Report : {{reports.id|stringformat:'06d'}}</p>
 
-                        <p class="prb_category">{{reports.get_category_display}}</p>
+                        <div class="category_status">
+                            <p class="prb_category">{{reports.get_category_display}}</p>
 
-                        <p class="status-{{reports.status}}">{{reports.get_status_display}}</p>
+                            <p class="status-{{reports.status}}">{{reports.get_status_display}}</p>
+                        </div>
+
                     </div>
 
                     <div class="location">

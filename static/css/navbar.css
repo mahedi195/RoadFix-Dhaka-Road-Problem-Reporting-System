@@ -30,7 +30,6 @@
      display: flex;
      outline: 0;
      border: 0;
-     margin-left: 15px;
  }
 
  nav .othersOption {
@@ -256,7 +255,6 @@
 
  @media screen and (max-width: 800px) {
      .logo_and_roadFix {
-         margin-left: 10px;
      }
 
      .image_and_name {
@@ -280,7 +278,7 @@
      }
 
      nav .othersOption {
-         gap: 30px;
+         gap: 5px;
      }
      .profile{
         position: relative;
