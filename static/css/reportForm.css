@@ -3,10 +3,17 @@
     width: 700px;
     background-color: white;
     padding: 30px;
-    box-shadow: 0px 2px 10px #c5c3c3;
     border-radius: 5px;
 
+    border: 1px solid #1F4E78;
+    box-shadow: 5px 5px 10px #cfcece;
 
+
+
+}
+
+body {
+    background-color: white;
 }
 
 .report_a_prb_text {
@@ -27,6 +34,7 @@ label {
     display: block;
     margin-bottom: 3px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 input,
@@ -46,14 +54,14 @@ textarea,
     outline: 0;
     border: 1px solid #b7b7b7;
     padding: 8px 15px;
-    font-size: 16px;
+    font-size: 20px;
     box-shadow: 0px 2px 10px #c5c3c3;
     color: #333333;
 }
 
 select {
     width: 300px;
-    font-size: 17px;
+    font-size: 20px;
     border: 1px solid #b7b7b7;
     cursor: pointer;
     border-radius: 5PX;
@@ -72,7 +80,7 @@ select option {
 .submit {
     background-color: #1F4E78;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -81,13 +89,13 @@ select option {
 }
 
 .back_home {
-    font-size: 18px;
+    font-size: 20px;
     color: #1F4E78
 }
 
 .back_to_home .arrow {
     color: #1F4E78;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .back_to_home a {
@@ -112,30 +120,36 @@ textarea::placeholder {
 
 
 @media screen and (max-width:800px) {
-    .full_form{
+    .full_form {
         margin: 15px auto;
     }
 
-    .report_a_prb_text{
+    .report_a_prb_text {
         font-size: 20px;
-            margin:20PX 20PX;
+        margin: 20PX 20PX;
     }
-  input,select,textarea,.submit,.back_home{
+
+    input,
+    select,
+    textarea,
+    .submit,
+    .back_home {
         font-size: 16px;
     }
 
-    label{
+    label {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width:740px) {
-    .full_form{
+    .full_form {
         margin: 15px auto;
         width: 90%;
         padding: 10px;
     }
-    select{
+
+    select {
         width: 90%;
     }
 }

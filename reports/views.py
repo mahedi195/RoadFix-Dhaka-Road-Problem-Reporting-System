@@ -60,7 +60,7 @@ def delete_reporT(request, id):
 
         else:
             report.delete()
-            messages.success(request, "report deleted successfully")
+            messages.success(request, f"report no. {id} deleted successfully")
             return redirect("myProfilePage")
     else:
         return redirect("myProfilePage")

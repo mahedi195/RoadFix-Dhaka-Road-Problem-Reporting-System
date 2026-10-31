@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #e7e6e6;;
+    background-color: white;
     font-family: Arial, sans-serif;
 
 }
@@ -15,14 +15,14 @@ body {
 .cart {
     /* font-size: 23px; */
     /* border: 1px solid #dfdcdc; */
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 1px 5px 10px #cfcece;
-    background-color: white;
     padding: 15px 25px;
     border-radius: 15px;
-
+    background: #f5f4f4;
+    border: 1px solid #1F4E78;
+    box-shadow: 5px 5px 10px #cfcece;
 }
 
 
@@ -39,7 +39,7 @@ body {
 
 .issue_status p {
     margin: 0px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .status-pending {
@@ -92,7 +92,7 @@ body {
     margin: 0px;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .prb_category {
@@ -113,7 +113,9 @@ body {
     margin-bottom: 0px;
     /* margin-top: 8px; */
     margin-top: 7px;
-    font-size: 19px;
+    font-size: 22px;
+    color: #1F4E78;
+
 
 }
 
@@ -122,7 +124,8 @@ body {
     /* margin-top: 10px; */
     margin-bottom: 0px;
     margin-top: 5px;
-    font-size: 17px;
+    font-size: 20px;
+    color: #817d7d;
 }
 
 .recent_road_problems_text {
@@ -147,7 +150,8 @@ body {
     right: 0px;
     position: absolute;
     /* font-weight: bold;*/
-    background-color: white;
+    background-color: #1F4E78;
+    color: white;
 
     transition: background-color 0.3s ease,
         border-color 0.3s ease,
@@ -155,15 +159,21 @@ body {
 }
 
 .view_details:hover {
-    background-color: rgb(224, 222, 222);
+    color: #1F4E78;
+    background-color: white;
     border-color: #555;
     transform: scale(1.05);
+    border: 1px solid #1F4E78;
+}
+
+.view_details:hover a {
+    color: #1F4E78;
 }
 
 .view_details a {
-    color: black;
+    color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
@@ -220,7 +230,7 @@ body {
 .main_section h2 {
     margin: 0;
     color: #1F4E78;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -241,7 +251,7 @@ body {
 
 
 .reportSection .box {
-    background: white;
+    background: #1F4E78;
     border-radius: 7px;
     padding: 30px;
     font-size: 20px;
@@ -255,19 +265,20 @@ body {
 .reportSection .box .text .firstline {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    color: white;
 
 }
 
 .reportSection .box .text .secondline {
-    color: rgb(129 129 129);
-    font-size: 16px;
+    color: white;
+    font-size: 20px;
 }
 
 .reportSection .ReporSectionheadline {
     margin-top: 40px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 30px;
     color: #1F4E78;
 }
@@ -513,12 +524,12 @@ header .btn a:hover {
 /*category and status */
 @media screen and (max-width:419px) {
     .category_status {
-      /* grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr;
        gap: 5px;
        */
-       display: flex;
-       justify-content: space-between;
-        
+        display: flex;
+        justify-content: space-between;
+
     }
 
 }
@@ -527,12 +538,12 @@ header .btn a:hover {
 @media screen and (max-width:360px) {
     .category_status {
         display: grid;
-       grid-template-columns: 1fr;
-       gap: 5px;
-       width: 200px;
-       
-       
-        
+        grid-template-columns: 1fr;
+        gap: 5px;
+        width: 200px;
+
+
+
     }
 
 }

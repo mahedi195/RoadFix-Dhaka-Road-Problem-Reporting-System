@@ -1,13 +1,13 @@
  body {
      margin: 0;
      padding: 0;
-     background-color: #f1f1f1;
      font-family: Arial, sans-serif;
 
  }
 
  .personalInformationText p {
      color: #1F4E78;
+     font-size: 25px;
  }
 
 
@@ -86,15 +86,16 @@
 
  .block label {
      color: gray;
-     font-size: 16px;
+     font-size: 20px;
      padding-left: 5px;
  }
 
  .block .val {
      background-color: #d1dfeb;
      padding: 10px 0px;
-     font-size: 16px;
+     font-size: 20px;
      padding-left: 5px;
+     border-radius: 5px;
 
  }
 
@@ -110,9 +111,10 @@
      display: flex;
      align-items: center;
      gap: 10px;
-     font-size: 16px;
+     font-size: 20px;
      justify-content: space-between;
      margin-bottom: 5px;
+         color: #5b5b5b;
  }
 
 
@@ -123,7 +125,8 @@
  }
 
  .location p span {
-     font-size: 16px;
+     font-size: 20px;
+         color: #5b5b5b;
  }
 
  .location {
@@ -133,14 +136,20 @@
 
  .prb_description {
      margin: 10px 0px;
+     font-size: 20px;
+     color: #5b5b5b;
  }
 
  .cart {
      margin-bottom: 20px;
      background-color: white;
-     border-radius: 5px;
+     border-radius: 15px;
      padding: 25px;
-     box-shadow: 3px 5px 10px #c5c3c3;
+     background: #f5f4f4;
+
+     border: 1px solid #1F4E78;
+     box-shadow: 5px 5px 10px #cfcece;
+
  }
 
 
@@ -157,7 +166,7 @@
  body {
      margin: 0;
      /* width: 620px; */
-     background-color: #e0e3e5;
+     background-color: white;
  }
 
  .myAllReport {
@@ -166,6 +175,7 @@
      font-size: 16px;
      color: #1F4E78;
      font-weight: bold;
+     font-size: 25px;
  }
 
  .reportBox {
@@ -233,8 +243,8 @@
      font-size: 20px;
      font-weight: bold;
      margin-top: 40px;
-     margin-bottom: 10px;
-     font-size: 16px;
+     margin-bottom: 2px;
+     font-size: 25px;
  }
 
  .info {
@@ -356,7 +366,7 @@
      background-color: #1F4E78;
      border: none;
      border-radius: 5px;
-     font-size: 16px;
+     font-size: 20px;
      padding: 5px 22px;
      cursor: pointer;
  }
@@ -373,7 +383,7 @@
      background-color: red;
      border: none;
      border-radius: 5px;
-     font-size: 16px;
+     font-size: 20px;
      padding: 5px 22px;
      cursor: pointer;
 
@@ -384,13 +394,17 @@
      background-color: rgb(248, 217, 217);
  }
 
+ .prb_name {
+     font-size: 20px;
+     color: #1F4E78;
+ }
 
  .view_details_btn {
      color: white;
      background-color: #1F4E78;
      border: none;
      border-radius: 5px;
-     font-size: 16px;
+     font-size: 20px;
      padding: 5px 22px;
      cursor: pointer;
  }
@@ -477,17 +491,17 @@
      }
  }
 
-   @media screen and (max-width:435px) {
-    .issue_status{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+ @media screen and (max-width:435px) {
+     .issue_status {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+     }
 
-    .edit_delete_viewDetils_button{
-                display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-  }
+     .edit_delete_viewDetils_button {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 5px;
+     }
+ }

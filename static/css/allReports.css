@@ -8,7 +8,7 @@
 .dashboard_text p {
     margin: 0;
     color: #575353;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 40px;
 }
 
@@ -82,13 +82,14 @@
     margin: 0;
     margin-bottom: 3px;
     color: #1F4E78;
+    font-size: 30px;
 }
 
 .recentReportsText h3 {
     color: #1F4E78;
     margin-top: 50px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 25px;
     /* margin-top: 40px; */
 }
 
@@ -106,7 +107,7 @@
 
 .cart .title {
     color: #1F4E78;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .cart .pending {
@@ -147,6 +148,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #5b5b5b;
 
 }
 
@@ -159,31 +161,34 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    font-size: 20px;
+    color: #5b5b5b;
 }
 
 
 .cart {
     /*padding: 10px 20px; */
-    background: white;
     margin-bottom: 20px;
     padding: 15px 25px;
     border-radius: 15px;
-    box-shadow: 0px 2px 10px #c5c3c3;
+    background: #f5f4f4;
+    border: 1px solid #1F4E78;
+    box-shadow: 5px 5px 10px #cfcece;
 }
 
 
 body {
     margin: 0;
-    background-color: #efefef;
+    background-color: white;
     /* padding: 0px 50px;
     margin: 50px 0px;
     */
 }
 
 .date_viewMore .viewDetails {
-    font-size: 16px;
+    font-size: 20px;
     background-color: #1F4E78;
-    padding: 4px 15px;
+    padding: 8px 18px;
     border-radius: 20px;
     color: white;
     transition: transform 0.3s ease,
@@ -201,6 +206,7 @@ body {
 .recentReports .cart p {
     /* margin: 3px; */
     margin: 0;
+    font-size: 20px;
 }
 
 .allReportPage {
@@ -210,16 +216,15 @@ body {
 
 .search_titile_status {
     background-color: white;
-    padding: 25px;
     border-radius: 15px;
 }
 
 .search_titile_status input {
-    padding: 10px 12px;
+    padding: 8px 15px;
     border: 1px solid #b9b2b2;
     outline: 0;
     border-radius: 7px;
-    font-size: 18px;
+    font-size: 20px;
     color: #635e5e;
     flex: 1;
 }
@@ -240,7 +245,7 @@ body {
 .search_titile_status p {
     margin: 0;
     margin-top: 3px;
-    font-size: 13px;
+    font-size: 14px;
     color: #575353;
 }
 
@@ -256,44 +261,52 @@ body {
     margin-top: 20px;
 }
 
-@media screen and (max-width:550px){
-    .allReportPage{
+@media screen and (max-width:550px) {
+    .allReportPage {
         margin: 15px;
     }
-    .cart{
+
+    .cart {
         padding: 15px;
     }
 }
 
 
-@media screen and (max-width:510px){
-    .title_status,.date_viewMore{
+@media screen and (max-width:510px) {
+
+    .title_status,
+    .date_viewMore {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    .location{
+
+    .location {
         margin: 6px 0px;
     }
-    .viewDetails{
+
+    .viewDetails {
         margin-top: 5px;
     }
-    .search_titile_status{
+
+    .search_titile_status {
         padding: 15px;
     }
 
 }
 
-@media screen and (max-width:510px){
-   .search_titile_status .input_button{
+@media screen and (max-width:510px) {
+    .search_titile_status .input_button {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    .search_titile_status input{
+
+    .search_titile_status input {
         width: 100%;
     }
-    .search_titile_status button{
+
+    .search_titile_status button {
         width: 100%;
     }
 

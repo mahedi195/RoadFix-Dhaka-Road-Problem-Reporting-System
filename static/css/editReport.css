@@ -5,6 +5,9 @@
 label {
     display: block;
 }
+body{
+    background-color: white;
+}
 
 .full_form {
     width: 600px;
