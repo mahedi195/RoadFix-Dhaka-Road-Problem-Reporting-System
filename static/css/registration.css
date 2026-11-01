@@ -12,12 +12,13 @@
  }
 
  .registrationForm {
-     border: 1px solid rgb(199, 197, 197);
-     width: 650px;
-     border-radius: 5px;
-     padding: 20px;
-     margin: 35px auto;
-     width: 96%;
+    border: 1px solid #1F4E78;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 35px auto;
+    width: 96%;
+    box-shadow: 1px 5px 15px #8f8c8c;
+    max-width: 650px;
  }
 
  .headingSeaction {
@@ -135,4 +136,13 @@
  .input_error:focus {
      border: 1px solid red;
      box-shadow: 1px 2px 5px rgb(182, 91, 91);
+ }
+
+ @media screen and (max-width:480px) {
+    .name_section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 5px;
+}    
  }
