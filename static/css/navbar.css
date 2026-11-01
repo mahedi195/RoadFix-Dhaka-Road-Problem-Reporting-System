@@ -415,7 +415,7 @@
 
 
 
-     
+
      nav .register_login {
          border-bottom: 1px solid rgb(168, 168, 168);
          position: relative;
@@ -445,6 +445,28 @@
      .image_and_name {
          margin-right: 0px;
      }
+
+
+
+
+
+
+     .register_loginPage {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         width: 100%;
+         gap: 0;
+     }
+
+     .register_loginPage a {
+         display: block;
+         width: 100%;
+         padding: 5px;
+         color: #1F4E78;
+         border-bottom: 1px solid #b3b1b1;
+     }
+
 
 
  }
