@@ -415,22 +415,30 @@
 
 
 
+
+
+
+
+
+
+
+
+ 
+.profile ul {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
 @media screen and (min-width: 769px) {
-
     .profile:hover ul {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        display: block;
     }
-
 }
 
 @media screen and (max-width: 768px) {
-
     .profile.active ul {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        display: block;
     }
-
 }
