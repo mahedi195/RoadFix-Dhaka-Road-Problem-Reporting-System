@@ -8,6 +8,7 @@ class Report(models.Model):
         ("damaged_road", "Damaged Road"),
         ("waterlogging", "Waterlogging"),
         ("broken_streetlight", "Broken Streetlight"),
+         ("road_side_waste", "Road side waste"),
         ("other", "Other"),
     ]
 

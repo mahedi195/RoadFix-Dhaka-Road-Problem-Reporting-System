@@ -37,6 +37,34 @@ label {
     font-size: 20px;
 }
 
+.submit {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #b7b7b7;
+    padding: 8px 15px;
+    font-size: 20px;
+    box-shadow: 0px 2px 10px #c5c3c3;
+}
+
+
+.submit {
+    background-color: #1F4E78;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submit:hover{
+    background-color: white;
+    color: #1F4E78;
+    border: 1px solid #1F4E78;
+    transform:scale(1.02)
+}
+
+
+
 input,
 textarea,
 .submit {
@@ -48,8 +76,7 @@ textarea {
 }
 
 input,
-textarea,
-.submit {
+textarea{
     border-radius: 5px;
     outline: 0;
     border: 1px solid #b7b7b7;
@@ -77,12 +104,6 @@ select option {
     border: 1px solid #b7b7b7;
 }
 
-.submit {
-    background-color: #1F4E78;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
 
 * {
     box-sizing: border-box;

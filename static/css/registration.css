@@ -82,7 +82,7 @@
             outline: 0;
             border: 1px solid #b3afaf;
             color: white;
-            background: #163b32;
+            background-color: #1F4E78;
             cursor: pointer;
 
             transition: background-color 0.3s ease,
@@ -90,7 +90,9 @@
         }
 
         .createAccount button:hover {
-            background-color: #3b7e6d;
+            background-color:white;
+            color: #1F4E78;
+            border: 1px solid #1F4E78;
             transform: scale(1.02);
         }
 
@@ -104,7 +106,7 @@
         }
 
         .loginSection .login {
-            color: #163b32;
+            color:#1F4E78;
             font-weight: bold;
             text-decoration: underline;
             cursor: pointer;

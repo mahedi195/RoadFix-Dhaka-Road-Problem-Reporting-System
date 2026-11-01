@@ -121,7 +121,7 @@ def report_create(request):
     elif request.method == "POST":
         title = request.POST.get("title")
 
-        description = request.POST.get("further_details", " ")
+        description = request.POST.get("description","")
         category = request.POST.get("category")
         photo = request.FILES.get("uploaded_photo")
         # status=request.POST.get('title')
@@ -130,7 +130,7 @@ def report_create(request):
         location = request.POST.get("location")
         road_information = request.POST.get("road_information")
         landmarks = request.POST.get("nearby_landmark", " ")
-        additional_details = request.POST.get("additional_location_details", " ")
+        additional_details = request.POST.get("additional_location_details")
 
         Report.objects.create(
             title=title,

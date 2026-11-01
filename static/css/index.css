@@ -370,7 +370,9 @@ header .fourthLine {
 
 
 header .btn a:hover {
-    background-color: #5e6baf;
+    background-color: white;
+    color: #1F4E78;
+    border: 1px solid #1F4E78;
 }
 
 
@@ -456,6 +458,10 @@ header .btn a:hover {
 /*road issue waiting fixed issue*/
 @media screen and (max-width:550px) {
 
+     .coverPhoto {
+        object-fit: contain;
+        height: 320px;
+     }
     .reportSection .status {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

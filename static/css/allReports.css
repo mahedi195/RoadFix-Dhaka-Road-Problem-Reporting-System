@@ -197,7 +197,9 @@ body {
 }
 
 .date_viewMore .viewDetails:hover {
-    background-color: #73b5f3;
+    background-color:white;
+    color: #1F4E78;
+    border: 1px solid #1F4E78;
     transform: scale(1.02);
 
 }
@@ -240,6 +242,11 @@ body {
     background: #1F4E78;
     color: white;
     border: none;
+}
+.search_titile_status button:hover{
+    color: #1F4E78;
+    background-color: white;
+    border: 1px solid #1F4E78;
 }
 
 .search_titile_status p {

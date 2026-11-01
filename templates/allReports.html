@@ -23,21 +23,19 @@
             <p>Welcome to all reports page. Here's an overview of user's reports</p>
         </div>
 
- 
+
         <div class="search_titile_status">
 
             <form method="POST">
                 {% csrf_token %}
-               <div class="input_button">
-                    <input type="text" placeholder="Search reports by title.." 
-                    name="searching" 
-                    value="{{SEarching_text}}"
-                    style="outline: none;">
+                <div class="input_button">
+                    <input type="text" placeholder="Search reports by title.." name="searching"
+                        value="{{SEarching_text}}" style="outline: none;">
                     <button type="submit">Search</button>
-            </div>
-                </form>
+                </div>
+            </form>
 
-            <p class="searchesEx">Example searches: Pothole, damaged_road, Waterlogging, broken_streetlight,Other,
+            <p class="searchesEx">Example searches: Pothole, damaged_road, Waterlogging, road_side_waste, broken_streetlight,Other,
                 Pending, In Progress, Resolved
             </p>
         </div>
@@ -47,7 +45,7 @@
 
         {% if allReports %}
 
-        
+
         <div class="recentReportsText">
             <h3>Recent Reports</h3>
         </div>

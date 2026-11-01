@@ -175,4 +175,5 @@ def user_registration(request):
                 password=password1,
             )
             print("user created succesfully")
+            messages.success(request,'Report created successfully!')
             return redirect("/")
