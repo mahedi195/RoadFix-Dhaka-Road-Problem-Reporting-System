@@ -412,20 +412,22 @@
  }
 
 
+.profile ul {
+    display: none;
+}
 
+@media screen and (min-width: 769px) {
 
- @media (min-width: 769px) {
-     .profile:hover ul {
-         display: block;
-     }
- }
+    .profile:hover ul {
+        display: block;
+    }
 
- @media (max-width: 768px) {
-     .profile ul {
-         display: none;
-     }
+}
 
-     .profile.active ul {
-         display: block;
-     }
- }
+@media screen and (max-width: 768px) {
+
+    .profile.active ul {
+        display: block;
+    }
+
+}
