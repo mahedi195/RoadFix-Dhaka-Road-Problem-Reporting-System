@@ -1,4 +1,4 @@
-
+<img width="1365" height="767" alt="show all column of report table" src="https://github.com/user-attachments/assets/e1325874-726c-4174-9a71-04af6ba07efb" /><img width="1365" height="767" alt="show all users" src="https://github.com/user-attachments/assets/f2973a13-c2ed-48fa-acb3-e7345d60456a" />
 **Home page**
 <img width="1365" height="767" alt="Screenshot 2026-11-01 154324" src="https://github.com/user-attachments/assets/9c5c9e6f-e784-49dc-bcc8-4990b7de2c2f" />
 <img width="1365" height="764" alt="Screenshot 2026-11-01 154331" src="https://github.com/user-attachments/assets/fa320af1-64dd-4587-854d-a8932aa61ec0" />
@@ -63,9 +63,10 @@
 <img width="1365" height="766" alt="JS message after report submitted" src="https://github.com/user-attachments/assets/6b759f07-f0c9-40ba-85bb-f1415efbefca" />
 <img width="1365" height="767" alt="as current status is not pending, user cant delete report" src="https://github.com/user-attachments/assets/5caea8c8-b1f3-4622-8f6a-e33793cdb800" />
 
-
-
-
-
+**Mysql query**
+<img width="1365" height="767" alt="show all tables" src="https://github.com/user-attachments/assets/c9426fbf-5b75-4675-bdb0-d3d38f1bccdf" />
+<img width="1365" height="767" alt="show all column of report table" src="https://github.com/user-attachments/assets/5e480234-85d7-40cc-ba11-326ae37ea98f" />
+<img width="1365" height="767" alt="show all users" src="https://github.com/user-attachments/assets/239928da-8026-4c33-b44e-f07c242d82a0" />
+<img width="1365" height="767" alt="show all reports" src="https://github.com/user-attachments/assets/d1a63d61-6852-455d-b2fa-88fba99911c8" />
 
 
