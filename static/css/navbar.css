@@ -412,14 +412,15 @@
  }
 
 
-.profile ul {
-    display: none;
-}
+
+
 
 @media screen and (min-width: 769px) {
 
     .profile:hover ul {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
 }
@@ -427,7 +428,9 @@
 @media screen and (max-width: 768px) {
 
     .profile.active ul {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
 }
