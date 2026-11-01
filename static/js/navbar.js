@@ -1,9 +1,11 @@
 const menuIcon = document.querySelector('.menuIcon');
 const hidden_when_mobile_Active = document.querySelector('.hidden_when_mobile_Active');
 
-menuIcon.addEventListener('click', function () {
-    hidden_when_mobile_Active.classList.toggle('showMenu');
-});
+if (menuIcon && hidden_when_mobile_Active) {
+    menuIcon.addEventListener('click', function () {
+        hidden_when_mobile_Active.classList.toggle('showMenu');
+    });
+}
 
 const profile = document.querySelector('.profile');
 const profileButton = document.querySelector('.image_and_name');
