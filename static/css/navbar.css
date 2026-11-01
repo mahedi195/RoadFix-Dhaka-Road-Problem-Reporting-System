@@ -297,7 +297,7 @@
 
 
 
-
+/*
 
  @media screen and (max-width:660px) {
 
@@ -411,3 +411,97 @@
 
 
  }
+
+ */
+
+
+
+ @media screen and (max-width:660px) {
+
+    .hidden_when_mobile_Active {
+        display: none;
+    }
+
+    .menuIcon img {
+        display: block;
+    }
+
+    .hidden_when_mobile_Active.showMenu {
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        padding: 5px 0px;
+    }
+
+    nav .othersOption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .othersOption a {
+        display: block;
+        width: 100%;
+        color: #1F4E78;
+        border-bottom: 1px solid #b3b1b1;
+        padding: 10px 15px;
+    }
+
+    nav .register_login {
+        color: #1F4E78;
+        width: 100%;
+        border-bottom: 1px solid #b3b1b1;
+    }
+
+    .profile {
+        width: 100%;
+        cursor: default;
+    }
+
+    .image_and_name {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+        margin: 0;
+        border-bottom: 1px solid #b3b1b1;
+    }
+
+    .profile .username {
+        color: #1F4E78;
+    }
+
+    /* Force the profile list to be permanently visible inline on mobile */
+    .profile ul {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: #f9f9f9 !important;
+        width: 100% !important;
+        box-shadow: none;
+    }
+
+    .profile ul li {
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .profile ul li a {
+        display: block;
+        padding: 10px 25px;
+        color: #1F4E78;
+    }
+
+    .image_and_name img {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+}
