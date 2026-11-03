@@ -252,6 +252,25 @@ body {
 }
 
 
+.box.deleted{
+    background-color:red;
+}
+
+.box.deleted .number{
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:800px) {
 
     .dashboard_text,

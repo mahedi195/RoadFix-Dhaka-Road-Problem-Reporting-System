@@ -97,6 +97,9 @@ def dashboard(request):
     pending = Report.objects.filter(status="pending").count()
     inProgress = Report.objects.filter(status="in_progress").count()
     resolvedd = Report.objects.filter(status="resolved").count()
+    totalId = Report.objects.last().id
+    deleted=totalId-totReport
+
     return render(
         request,
         "dashboard.html",
@@ -106,6 +109,8 @@ def dashboard(request):
             "pendingReport": pending,
             "inProgressReport": inProgress,
             "resolvedReport": resolvedd,
+            'totalId':totalId,
+            'deleted':deleted
         },
     )
 
